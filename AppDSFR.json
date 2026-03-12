@@ -1,0 +1,247 @@
+{
+ "object": "Module",
+ "userkey": "AppDSFR",
+ "item": {
+  "mdl_name": "AppDSFR",
+  "mdl_prefix": "dsfr",
+  "mdl_version": "0.1",
+  "mdl_type": "A",
+  "mdl_icon": null,
+  "mdl_url": "{\n    \"origin\": {\"uri\": \"https://github.com/Abel-HenryLapassat/module-dsfr-app.git\"},\n    \"type\": \"git\"\n}",
+  "mdl_comment": null
+ },
+ "links": [
+  {
+   "object": "View",
+   "label": "Views",
+   "icon": "img/system/view",
+   "field": "row_module_id",
+   "list": [{
+    "object": "View",
+    "userkey": "AppDSFRScope",
+    "item": {
+     "viw_name": "AppDSFRScope",
+     "viw_type": "H",
+     "viw_ui": null,
+     "viw_order": 1,
+     "viw_icon": "dsfr",
+     "viw_disp_id__dis_code": null,
+     "viw_scope": null,
+     "row_module_id__mdl_name": "AppDSFR",
+     "viw_theme_id__thm_name": null,
+     "viw_lang": null
+    }
+   }]
+  },
+  {
+   "object": "Group",
+   "label": "Groups",
+   "icon": "img/system/group",
+   "field": "row_module_id",
+   "list": [
+    {
+     "object": "Group",
+     "userkey": "DSFR_ADMIN",
+     "item": {
+      "grp_name": "DSFR_ADMIN",
+      "grp_comment": null,
+      "grp_type": [
+       "G",
+       "D",
+       "W",
+       "R",
+       "N",
+       "B"
+      ],
+      "grp_parent_id__grp_name": null,
+      "grp_home_id__viw_name": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "Group",
+     "userkey": "DSFR_USER",
+     "item": {
+      "grp_name": "DSFR_USER",
+      "grp_comment": null,
+      "grp_type": [
+       "G",
+       "W"
+      ],
+      "grp_parent_id__grp_name": null,
+      "grp_home_id__viw_name": "AppDSFRScope",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    }
+   ]
+  },
+  {
+   "object": "Domain",
+   "label": "Domains",
+   "icon": "img/system/domain",
+   "field": "row_module_id",
+   "list": [{
+    "object": "Domain",
+    "userkey": "DsfrDomain",
+    "item": {
+     "obd_name": "DsfrDomain",
+     "obd_comment": null,
+     "obd_type": "D",
+     "obd_view_id__viw_name": null,
+     "obd_nohome": true,
+     "obd_icon": "dsfr",
+     "obd_order": 1,
+     "obd_domain_id__obd_name": null,
+     "row_module_id__mdl_name": "AppDSFR"
+    }
+   }]
+  },
+  {
+   "object": "ViewGroup",
+   "label": "Active group",
+   "icon": "object",
+   "field": "row_module_id",
+   "list": [{
+    "object": "ViewGroup",
+    "userkey": "AppDSFRScope~DSFR_USER",
+    "item": {
+     "vig_view_id__viw_name": "AppDSFRScope",
+     "vig_group_id__grp_name": "DSFR_USER",
+     "row_module_id__mdl_name": "AppDSFR"
+    }
+   }]
+  },
+  {
+   "object": "TranslateDomain",
+   "label": "Domain translation",
+   "icon": "img/system/translation",
+   "field": "row_module_id",
+   "list": [
+    {
+     "object": "TranslateDomain",
+     "userkey": "Domain(DsfrDomain)~ENU",
+     "item": {
+      "tsl_object": {
+       "object": "Domain",
+       "label": "Domain",
+       "userkeylabel": "DsfrDomain",
+       "icon": "img/system/domain",
+       "item": {"obd_name": "DsfrDomain"}
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "DSFR Application",
+      "tsl_help": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateDomain",
+     "userkey": "Domain(DsfrDomain)~FRA",
+     "item": {
+      "tsl_object": {
+       "object": "Domain",
+       "label": "Domain",
+       "userkeylabel": "DsfrDomain",
+       "icon": "img/system/domain",
+       "item": {"obd_name": "DsfrDomain"}
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Application DSFR",
+      "tsl_help": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    }
+   ]
+  },
+  {
+   "object": "TranslateView",
+   "label": "View translation",
+   "icon": "img/system/translation",
+   "field": "row_module_id",
+   "list": [
+    {
+     "object": "TranslateView",
+     "userkey": "View(AppDSFRScope)~ENU",
+     "item": {
+      "tsl_object": {
+       "object": "View",
+       "label": "View",
+       "userkeylabel": "AppDSFRScope",
+       "icon": "img/system/view",
+       "item": {"viw_name": "AppDSFRScope"}
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "App DSFRscope",
+      "tsl_help": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateView",
+     "userkey": "View(AppDSFRScope)~FRA",
+     "item": {
+      "tsl_object": {
+       "object": "View",
+       "label": "View",
+       "userkeylabel": "AppDSFRScope",
+       "icon": "img/system/view",
+       "item": {"viw_name": "AppDSFRScope"}
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "App DSFRscope",
+      "tsl_help": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    }
+   ]
+  },
+  {
+   "object": "Permission",
+   "label": "Permissions",
+   "icon": "img/system/state_transition_permission",
+   "field": "row_module_id",
+   "list": [
+    {
+     "object": "Permission",
+     "userkey": "DSFR_ADMIN~Domain(DsfrDomain)~",
+     "item": {
+      "prm_group_id__grp_name": "DSFR_ADMIN",
+      "prm_object": {
+       "object": "Domain",
+       "label": "Domain",
+       "userkeylabel": "DsfrDomain",
+       "icon": "img/system/domain",
+       "item": {"obd_name": "DsfrDomain"}
+      },
+      "prm_perm": true,
+      "prm_upd": false,
+      "prm_req": false,
+      "prm_prop": null,
+      "prm_value": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "Permission",
+     "userkey": "DSFR_USER~Domain(DsfrDomain)~",
+     "item": {
+      "prm_group_id__grp_name": "DSFR_USER",
+      "prm_object": {
+       "object": "Domain",
+       "label": "Domain",
+       "userkeylabel": "DsfrDomain",
+       "icon": "img/system/domain",
+       "item": {"obd_name": "DsfrDomain"}
+      },
+      "prm_perm": true,
+      "prm_upd": false,
+      "prm_req": false,
+      "prm_prop": null,
+      "prm_value": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    }
+   ]
+  }
+ ]
+}

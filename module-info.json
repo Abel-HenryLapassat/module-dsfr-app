@@ -1,0 +1,9 @@
+{
+    "date": "2026-03-12 12:12:16",
+    "name": "AppDSFR",
+    "format": "json",
+    "files": ["AppDSFR.json"],
+    "repository": {"origin": {"uri": "https://github.com/Abel-HenryLapassat/module-dsfr-app.git"}},
+    "version": "0.1",
+    "platform": "6.3.5"
+}

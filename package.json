@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "eslint": "latest",
+    "stylelint": "latest",
+    "@eslint/js": "latest",
+    "stylelint-config-standard-less": "latest",
+    "jshint": "latest",
+    "globals": "latest",
+    "stylelint-config-standard": "latest",
+    "@stylistic/stylelint-plugin": "latest"
+  },
+  "name": "AppDSFR",
+  "scripts": {
+    "eslint": "eslint --config=.eslint-configuration --no-color --no-error-on-unmatched-pattern resources/**/*.js",
+    "stylelint": "stylelint --config=.stylelint-configuration --no-color --allow-empty-input resources/**/*.css resources/**/*.less",
+    "jshint": "jshint --config=.jshint-configuration --reporter=jslint resources"
+  },
+  "version": "0.1"
+}
