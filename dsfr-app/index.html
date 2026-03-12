@@ -1,13 +1,199 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr" data-fr-scheme="system">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dsfr-app</title>
+    <title>Connexion - DSFR_APP</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/@gouvfr/dsfr@1.12.1/dist/dsfr.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@gouvfr/dsfr@1.12.1/dist/utility/utility.min.css" />
   </head>
   <body>
-    <div id="application"></div>
-    <script type="module" src="/src/main.js"></script>
+    <!-- MANDATORY HEADER -->
+    <header role="banner" class="fr-header">
+      <div class="fr-header__body">
+        <div class="fr-container">
+          <div class="fr-header__body-row">
+
+            <div class="fr-header__brand fr-enlarge-link">
+              <div class="fr-header__brand-top">
+                <div class="fr-header__logo">
+                  <p class="fr-logo">République<br />Française</p>
+                </div>
+              </div>
+              <div class="fr-header__service">
+                <a href="/" class="fr-header__service-title">Simplicité</a>
+                <p class="fr-header__service-tagline">Plateforme applicative</p>
+              </div>
+            </div>
+
+            <div class="fr-header__tools">
+              <div class="fr-header__tools-links">
+                <ul class="fr-btns-group">
+                  <li>
+                    <button
+                      class="fr-btn fr-btn--tertiary-no-outline fr-icon-theme-fill fr-btn--icon-left"
+                      aria-controls="fr-theme-modal"
+                      data-fr-opened="false"
+                    >
+                      Affichage
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN SECTION : LOGON -->
+    <main role="main" id="content">
+      <div class="fr-container">
+        <div style="max-width: 480px; margin: 3rem auto;">
+
+          <h1 class="fr-h3">Connexion</h1>
+
+          <div id="alert-zone" aria-live="polite"></div>
+
+          <form id="login-form" novalidate>
+
+            <!-- username -->
+            <div class="fr-input-group" id="username-group">
+              <label class="fr-label" for="username">Identifiant</label>
+              <input class="fr-input" type="text" id="username" name="username" />
+            </div>
+
+            <!-- password -->
+            <div class="fr-password" id="password-group">
+              <label class="fr-label" for="password">Mot de passe</label>
+              <div class="fr-input-wrap">
+                <input class="fr-password__input fr-input" type="password" id="password" name="password" />
+              </div>
+              <div class="fr-password__checkbox fr-checkbox-group fr-checkbox-group--sm">
+                <input type="checkbox" id="toggle-password" />
+                <label class="fr-label" for="toggle-password">Afficher</label>
+              </div>
+            </div>
+
+            <!-- submit -->
+            <div class="fr-btns-group fr-mt-3w">
+              <button class="fr-btn" type="submit" id="submit-btn" style="width:100%;">
+                Se connecter
+              </button>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- MANDATORY FOOTER -->
+    <footer role="contentinfo" class="fr-footer">
+      <div class="fr-container">
+        <div class="fr-footer__body">
+
+          <div class="fr-footer__brand fr-enlarge-link">
+            <a href="/" title="Retour à l'accueil">
+              <p class="fr-logo">République<br />Française</p>
+            </a>
+          </div>
+
+          <div class="fr-footer__content">
+            <p class="fr-footer__content-desc">
+              Application construite avec le Système de Design de l'État.
+            </p>
+            <ul class="fr-footer__content-links">
+              <li>
+                <a class="fr-footer__content-link" href="https://www.simplicite.io" target="_blank" rel="noopener noreferrer">
+                  simplicite.io
+                </a>
+              </li>
+              <li>
+                <a class="fr-footer__content-link" href="https://docs.simplicite.io" target="_blank" rel="noopener noreferrer">
+                  Documentation
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="fr-footer__bottom">
+          <ul class="fr-footer__bottom-list">
+            <li class="fr-footer__bottom-item">
+              <a class="fr-footer__bottom-link" href="#">Accessibilité : non conforme</a>
+            </li>
+            <li class="fr-footer__bottom-item">
+              <a class="fr-footer__bottom-link" href="#">Mentions légales</a>
+            </li>
+          </ul>
+          <div class="fr-footer__bottom-copy">
+            <p>Sauf mention contraire, tous les contenus de ce site sont sous
+              <a href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" target="_blank" rel="noopener noreferrer">
+                licence etalab-2.0
+              </a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+
+    <!-- MODALS -->
+     <dialog id="fr-theme-modal" class="fr-modal" role="dialog" aria-labelledby="fr-theme-modal-title">
+      <div class="fr-container fr-container--fluid fr-container-md">
+        <div class="fr-grid-row fr-grid-row--center">
+          <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+            <div class="fr-modal__body">
+
+              <div class="fr-modal__header">
+                <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal">
+                  Fermer
+                </button>
+              </div>
+
+              <div class="fr-modal__content">
+                <h1 id="fr-theme-modal-title" class="fr-modal__title">
+                  Paramètres d'affichage
+                </h1>
+                <div id="fr-display" class="fr-form-group">
+                  <fieldset class="fr-fieldset">
+                    <legend class="fr-fieldset__legend fr-text--regular">
+                      Choisissez un thème pour personnaliser l'apparence du site.
+                    </legend>
+                    <div class="fr-fieldset__content">
+                      <div class="fr-radio-group">
+                        <input type="radio" id="theme-system" name="fr-radios-theme" value="system" />
+                        <label class="fr-label" for="theme-system">Système (défaut)</label>
+                      </div>
+                      <div class="fr-radio-group">
+                        <input type="radio" id="theme-light" name="fr-radios-theme" value="light" />
+                        <label class="fr-label" for="theme-light">Thème clair</label>
+                      </div>
+                      <div class="fr-radio-group">
+                        <input type="radio" id="theme-dark" name="fr-radios-theme" value="dark" />
+                        <label class="fr-label" for="theme-dark">Thème sombre</label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- DSFR scripts-->
+    <script type="module" src="https://unpkg.com/@gouvfr/dsfr@1.12.1/dist/dsfr.module.min.js"></script>
+    <script nomodule src="https://unpkg.com/@gouvfr/dsfr@1.12.1/dist/dsfr.nomodule.min.js"></script>
+
+    <!-- custom script -->
+     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
