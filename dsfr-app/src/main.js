@@ -88,9 +88,12 @@ document.getElementById('login-form').addEventListener('submit', async (e) => {
 
   try {
     const user = await loginToSimplicite(baseUrl, username, password);
-    showAlert('success', 'Connexion réussie !', `Bienvenue, ${user.firstname} ${user.lastname}`);
+    // showAlert('success', 'Connexion réussie !', `Bienvenue, ${user.firstname} ${user.lastname}`);
     sessionStorage.setItem('simplicite_token', user.authtoken);
     sessionStorage.setItem('simplicite_base_url', baseUrl);
+    sessionStorage.setItem('simplicite_user', JSON.stringify(user));
+    // Redirect to the app "shell"
+    window.location.href = '/app.html';
   } catch (err) {
     showAlert('error', 'Échec de connexion', err.message);
   }
