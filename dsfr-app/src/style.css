@@ -4,10 +4,10 @@ body {
   flex-direction: column;
 }
 
-main {
+#app-content {
   flex: 1;
 }
 
-body > .fr-container {
+main {
   flex: 1;
 }

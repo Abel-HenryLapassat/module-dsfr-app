@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="https://unpkg.com/@gouvfr/dsfr@1.12.1/dist/dsfr.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/@gouvfr/dsfr@1.12.1/dist/utility/utility.min.css" />
+
+    <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
 
@@ -78,11 +80,11 @@
     </header>
 
     <!-- BODY -->
-    <div class="fr-container" style="margin-top: 2rem; margin-bottom: 3rem;">
+    <div id="app-content" class="fr-container" style="margin-top: 2rem; margin-bottom: 3rem;">
       <div class="fr-grid-row fr-grid-row--gutters">
 
         <!-- fr-sidemenu injected if VITE_MENU_LAYOUT=side -->
-        <div id="side-nav-container"></div>
+        <div id="side-nav-container" class="fr-col-12 fr-col-md-3"></div>
 
         <div id="work-area-col" class="fr-col-12">
           <main role="main" id="work-area">
