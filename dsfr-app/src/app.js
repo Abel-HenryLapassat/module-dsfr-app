@@ -232,17 +232,44 @@ async function loadObjectList(objectName) {
 
   try {
     const obj = app.getBusinessObject(objectName);
-
-    // Get metadata and filter to list-visible fields only
     await obj.getMetaData();
+
     const fields = obj.metadata.fields.filter((f) =>
       LIST_VISIBLE.includes(f.visible),
     );
-
-    // Fetch all rows
     const rows = await obj.search();
 
-    workArea.innerHTML = renderTable(objectName, fields, rows);
+    // Pass metadata so renderTable can read rights + actions
+    workArea.innerHTML = renderTable(objectName, obj.metadata, fields, rows);
+
+    // Wire row clicks for future form navigation
+    document.querySelectorAll("tr[data-row-id]").forEach((tr) => {
+      tr.addEventListener("click", () => {
+        const rowId = tr.getAttribute("data-row-id");
+        const object = tr.getAttribute("data-object");
+        console.log("Clicked row:", object, rowId); // placeholder for form loading
+      });
+    });
+
+    // Wire dropdown toggle manually (same DSFR dynamic init issue as sidemenu)
+    const dropdownBtn = document.getElementById(`btn-dropdown-${objectName}`);
+    const dropdownList = document.getElementById(
+      `actions-dropdown-${objectName}`,
+    );
+    if (dropdownBtn && dropdownList) {
+      dropdownBtn.addEventListener("click", () => {
+        const isOpen = dropdownBtn.getAttribute("aria-expanded") === "true";
+        dropdownBtn.setAttribute("aria-expanded", String(!isOpen));
+        dropdownList.style.display = isOpen ? "none" : "block";
+      });
+    }
+    if (dropdownBtn && dropdownList) {
+      dropdownBtn.addEventListener("click", () => {
+        const isOpen = dropdownBtn.getAttribute("aria-expanded") === "true";
+        dropdownBtn.setAttribute("aria-expanded", String(!isOpen));
+        dropdownList.style.display = isOpen ? "none" : "block";
+      });
+    }
   } catch (err) {
     workArea.innerHTML = `
       <div class="fr-alert fr-alert--error" role="alert">
@@ -253,32 +280,138 @@ async function loadObjectList(objectName) {
   }
 }
 
-function renderTable(objectName, fields, rows) {
+function renderTable(objectName, metadata, fields, rows) {
+  const primaryActions = metadata.actions.filter(
+    (a) => a.listVisible && a.enabled && !a.plus,
+  );
+  const dropdownActions = metadata.actions.filter(
+    (a) => a.listVisible && a.enabled && a.plus,
+  );
+
   return `
-    <h2 class="fr-h4">${objectName}</h2>
-    <div class="fr-table fr-table--layout-fixed">
-      <table>
-        <thead>
-          <tr>
-            ${fields.map((f) => `<th scope="col">${f.label}</th>`).join("")}
-          </tr>
-        </thead>
-        <tbody>
-          ${
-            rows.length === 0
-              ? `<tr><td colspan="${fields.length}">Aucun enregistrement.</td></tr>`
-              : rows
-                  .map(
-                    (row) => `
-              <tr data-row-id="${row.row_id}" style="cursor:pointer;">
-                ${fields.map((f) => `<td>${row[f.name] ?? "—"}</td>`).join("")}
-              </tr>
-            `,
-                  )
-                  .join("")
-          }
-        </tbody>
-      </table>
+    <div class="fr-card fr-card--no-arrow" style="width:100%;">
+
+      <!-- Card header -->
+      <div class="fr-card__header">
+        <div class="fr-card__img"></div>
+        <ul class="fr-badges-group"></ul>
+      </div>
+      <div class="fr-card__body">
+        <div class="fr-card__content">
+
+          <!-- Title row -->
+          <div style="display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:1rem;">
+            <div>
+              <h2 class="fr-h5 fr-mb-0">${metadata.label}</h2>
+              <p class="fr-text--sm fr-mb-0" style="color:var(--text-mention-grey)">Total ${rows.length}</p>
+            </div>
+            <div style="display:flex; gap:0.5rem; flex-wrap:wrap; justify-content:flex-end;">
+
+              ${
+                metadata.create
+                  ? `
+                <button class="fr-btn fr-btn--sm" id="btn-create-${objectName}">
+                  Créer
+                </button>
+              `
+                  : ""
+              }
+
+              ${primaryActions
+                .map(
+                  (a) => `
+                <button class="fr-btn fr-btn--sm fr-btn--secondary" data-action="${a.name}">
+                  ${a.label}
+                </button>
+              `,
+                )
+                .join("")}
+
+              ${
+                dropdownActions.length > 0
+                  ? `
+                <div style="position:relative;">
+                  <button
+                    class="fr-btn fr-btn--sm fr-btn--secondary fr-btn--icon-right fr-icon-arrow-down-s-fill"
+                    id="btn-dropdown-${objectName}"
+                    aria-expanded="false"
+                  >
+                    Actions
+                  </button>
+                  <div
+                    id="actions-dropdown-${objectName}"
+                    style="
+                      display:none;
+                      position:absolute;
+                      right:0;
+                      top:100%;
+                      z-index:100;
+                      background:var(--background-default-grey);
+                      border:1px solid var(--border-default-grey);
+                      min-width:180px;
+                      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                    "
+                  >
+                    <ul style="list-style:none; margin:0; padding:0.25rem 0;">
+                      ${dropdownActions
+                        .map(
+                          (a) => `
+                        <li>
+                          <button
+                            class="fr-btn fr-btn--tertiary-no-outline fr-btn--sm"
+                            data-action="${a.name}"
+                            style="width:100%; text-align:left; border-radius:0;"
+                          >
+                            ${a.label}
+                          </button>
+                        </li>
+                      `,
+                        )
+                        .join("")}
+                    </ul>
+                  </div>
+                </div>
+              `
+                  : ""
+              }
+
+            </div>
+          </div>
+
+          <!-- Table -->
+          <div class="fr-table" style="width:100%; overflow-x:auto;">
+            <table style="width:100%;">
+              <thead>
+                <tr>
+                  ${fields.map((f) => `<th scope="col">${f.label}</th>`).join("")}
+                </tr>
+              </thead>
+              <tbody>
+                ${
+                  rows.length === 0
+                    ? `<tr><td colspan="${fields.length}">Aucun enregistrement.</td></tr>`
+                    : rows
+                        .map(
+                          (row) => `
+                    <tr data-row-id="${row.row_id}" data-object="${objectName}" style="cursor:pointer;">
+                      ${fields.map((f) => `<td>${row[f.name] ?? "—"}</td>`).join("")}
+                    </tr>
+                  `,
+                        )
+                        .join("")
+                }
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Card footer -->
+      <div class="fr-card__footer" style="padding: 0.75rem 1.5rem;">
+        <p class="fr-text--sm fr-mb-0" style="color:var(--text-mention-grey);">Total ${rows.length}</p>
+      </div>
+
     </div>
   `;
 }
