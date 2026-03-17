@@ -1,4 +1,5 @@
 import Simplicite from "simplicite";
+import { LIST_VISIBLE, FORM_VISIBLE } from "./simplicite-utils";
 
 // --- Route guard ---
 const token = sessionStorage.getItem("simplicite_token");
@@ -17,6 +18,15 @@ const app = Simplicite.session({
   url: BASE_URL,
   authtoken: token,
 });
+
+try {
+  await app.login();
+} catch (err) {
+  // Token expired or invalid — send back to login
+  console.error("Session invalide, redirection...", err);
+  sessionStorage.clear();
+  window.location.href = "/index.html";
+}
 
 // --- User info ---
 const userBtn = document.getElementById("user-menu-btn");
@@ -154,6 +164,14 @@ function injectSideMenuItems(menuData) {
         target.classList.toggle("fr-collapse--expanded", !isExpanded);
       });
     });
+
+  document.querySelectorAll(".fr-sidemenu__link").forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const objectName = e.currentTarget.getAttribute("data-object");
+      loadObjectList(objectName);
+    });
+  });
 }
 
 function injectTopMenuItems(domains) {
@@ -207,3 +225,60 @@ if (currentRadio) currentRadio.checked = true;
 document.querySelectorAll('input[name="fr-radios-theme"]').forEach((radio) => {
   radio.addEventListener("change", (e) => applyScheme(e.target.value));
 });
+
+async function loadObjectList(objectName) {
+  const workArea = document.getElementById("work-area");
+  workArea.innerHTML = `<p class="fr-text--lead">Chargement...</p>`;
+
+  try {
+    const obj = app.getBusinessObject(objectName);
+
+    // Get metadata and filter to list-visible fields only
+    await obj.getMetaData();
+    const fields = obj.metadata.fields.filter((f) =>
+      LIST_VISIBLE.includes(f.visible),
+    );
+
+    // Fetch all rows
+    const rows = await obj.search();
+
+    workArea.innerHTML = renderTable(objectName, fields, rows);
+  } catch (err) {
+    workArea.innerHTML = `
+      <div class="fr-alert fr-alert--error" role="alert">
+        <h3 class="fr-alert__title">Erreur</h3>
+        <p>Impossible de charger les données : ${err.message}</p>
+      </div>
+    `;
+  }
+}
+
+function renderTable(objectName, fields, rows) {
+  return `
+    <h2 class="fr-h4">${objectName}</h2>
+    <div class="fr-table fr-table--layout-fixed">
+      <table>
+        <thead>
+          <tr>
+            ${fields.map((f) => `<th scope="col">${f.label}</th>`).join("")}
+          </tr>
+        </thead>
+        <tbody>
+          ${
+            rows.length === 0
+              ? `<tr><td colspan="${fields.length}">Aucun enregistrement.</td></tr>`
+              : rows
+                  .map(
+                    (row) => `
+              <tr data-row-id="${row.row_id}" style="cursor:pointer;">
+                ${fields.map((f) => `<td>${row[f.name] ?? "—"}</td>`).join("")}
+              </tr>
+            `,
+                  )
+                  .join("")
+          }
+        </tbody>
+      </table>
+    </div>
+  `;
+}

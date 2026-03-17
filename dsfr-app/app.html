@@ -17,6 +17,27 @@
         <link rel="stylesheet" href="/src/style.css" />
     </head>
     <body>
+        <!-- skiplinks (rgaa mandatory) -->
+        <div class="fr-skiplinks">
+            <nav
+                class="fr-container"
+                role="navigation"
+                aria-label="Accès rapide"
+            >
+                <ul class="fr-skiplinks__list">
+                    <li>
+                        <a class="fr-link" href="#side-nav-container">Menu</a>
+                    </li>
+                    <li>
+                        <a class="fr-link" href="#work-area">Contenu</a>
+                    </li>
+                    <li>
+                        <a class="fr-link" href="#footer">Pied de page</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
         <!-- HEADER -->
         <header role="banner" class="fr-header">
             <div class="fr-header__body">
@@ -129,7 +150,7 @@
         </div>
 
         <!-- FOOTER -->
-        <footer role="contentinfo" class="fr-footer">
+        <footer id="footer" role="contentinfo" class="fr-footer">
             <div class="fr-container">
                 <div class="fr-footer__body">
                     <div class="fr-footer__brand fr-enlarge-link">
