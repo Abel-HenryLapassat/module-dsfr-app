@@ -263,13 +263,6 @@ async function loadObjectList(objectName) {
         dropdownList.style.display = isOpen ? "none" : "block";
       });
     }
-    if (dropdownBtn && dropdownList) {
-      dropdownBtn.addEventListener("click", () => {
-        const isOpen = dropdownBtn.getAttribute("aria-expanded") === "true";
-        dropdownBtn.setAttribute("aria-expanded", String(!isOpen));
-        dropdownList.style.display = isOpen ? "none" : "block";
-      });
-    }
   } catch (err) {
     workArea.innerHTML = `
       <div class="fr-alert fr-alert--error" role="alert">
@@ -292,91 +285,89 @@ function renderTable(objectName, metadata, fields, rows) {
     <div class="fr-card fr-card--no-arrow" style="width:100%;">
 
       <!-- Card header -->
-      <div class="fr-card__header">
-        <div class="fr-card__img"></div>
-        <ul class="fr-badges-group"></ul>
+      <div class="fr-card__header" style="padding: 0.75rem 1.5rem;">
+
+        <!-- Title row -->
+        <div style="display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:1rem;">
+          <div>
+            <h2 class="fr-h5 fr-mb-0">${metadata.label}</h2>
+            <p class="fr-text--sm fr-mb-0" style="color:var(--text-mention-grey)">Total ${rows.length}</p>
+          </div>
+          <div style="display:flex; gap:0.5rem; flex-wrap:wrap; justify-content:flex-end;">
+
+            ${
+              metadata.create
+                ? `
+              <button class="fr-btn fr-btn--sm" id="btn-create-${objectName}">
+                Créer
+              </button>
+            `
+                : ""
+            }
+
+            ${primaryActions
+              .map(
+                (a) => `
+              <button class="fr-btn fr-btn--sm fr-btn--secondary" data-action="${a.name}">
+                ${a.label}
+              </button>
+            `,
+              )
+              .join("")}
+
+            ${
+              dropdownActions.length > 0
+                ? `
+              <div style="position:relative;">
+                <button
+                  class="fr-btn fr-btn--sm fr-btn--secondary fr-btn--icon-right fr-icon-arrow-down-s-fill"
+                  id="btn-dropdown-${objectName}"
+                  aria-expanded="false"
+                >
+                  Actions
+                </button>
+                <div
+                  id="actions-dropdown-${objectName}"
+                  style="
+                    display:none;
+                    position:absolute;
+                    right:0;
+                    top:100%;
+                    z-index:100;
+                    background:var(--background-default-grey);
+                    border:1px solid var(--border-default-grey);
+                    min-width:180px;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                  "
+                >
+                  <ul style="list-style:none; margin:0; padding:0.25rem 0;">
+                    ${dropdownActions
+                      .map(
+                        (a) => `
+                      <li>
+                        <button
+                          class="fr-btn fr-btn--tertiary-no-outline fr-btn--sm"
+                          data-action="${a.name}"
+                          style="width:100%; text-align:left; border-radius:0;"
+                        >
+                          ${a.label}
+                        </button>
+                      </li>
+                    `,
+                      )
+                      .join("")}
+                  </ul>
+                </div>
+              </div>
+            `
+                : ""
+            }
+
+          </div>
+        </div>
       </div>
       <div class="fr-card__body">
         <div class="fr-card__content">
-
-          <!-- Title row -->
-          <div style="display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:1rem;">
-            <div>
-              <h2 class="fr-h5 fr-mb-0">${metadata.label}</h2>
-              <p class="fr-text--sm fr-mb-0" style="color:var(--text-mention-grey)">Total ${rows.length}</p>
-            </div>
-            <div style="display:flex; gap:0.5rem; flex-wrap:wrap; justify-content:flex-end;">
-
-              ${
-                metadata.create
-                  ? `
-                <button class="fr-btn fr-btn--sm" id="btn-create-${objectName}">
-                  Créer
-                </button>
-              `
-                  : ""
-              }
-
-              ${primaryActions
-                .map(
-                  (a) => `
-                <button class="fr-btn fr-btn--sm fr-btn--secondary" data-action="${a.name}">
-                  ${a.label}
-                </button>
-              `,
-                )
-                .join("")}
-
-              ${
-                dropdownActions.length > 0
-                  ? `
-                <div style="position:relative;">
-                  <button
-                    class="fr-btn fr-btn--sm fr-btn--secondary fr-btn--icon-right fr-icon-arrow-down-s-fill"
-                    id="btn-dropdown-${objectName}"
-                    aria-expanded="false"
-                  >
-                    Actions
-                  </button>
-                  <div
-                    id="actions-dropdown-${objectName}"
-                    style="
-                      display:none;
-                      position:absolute;
-                      right:0;
-                      top:100%;
-                      z-index:100;
-                      background:var(--background-default-grey);
-                      border:1px solid var(--border-default-grey);
-                      min-width:180px;
-                      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-                    "
-                  >
-                    <ul style="list-style:none; margin:0; padding:0.25rem 0;">
-                      ${dropdownActions
-                        .map(
-                          (a) => `
-                        <li>
-                          <button
-                            class="fr-btn fr-btn--tertiary-no-outline fr-btn--sm"
-                            data-action="${a.name}"
-                            style="width:100%; text-align:left; border-radius:0;"
-                          >
-                            ${a.label}
-                          </button>
-                        </li>
-                      `,
-                        )
-                        .join("")}
-                    </ul>
-                  </div>
-                </div>
-              `
-                  : ""
-              }
-
-            </div>
-          </div>
 
           <!-- Table -->
           <div class="fr-table" style="width:100%; overflow-x:auto;">
@@ -408,7 +399,7 @@ function renderTable(objectName, metadata, fields, rows) {
       </div>
 
       <!-- Card footer -->
-      <div class="fr-card__footer" style="padding: 0.75rem 1.5rem;">
+      <div class="fr-card__footer" style="padding: 0.75rem 1.5rem; margin: 0;">
         <p class="fr-text--sm fr-mb-0" style="color:var(--text-mention-grey);">Total ${rows.length}</p>
       </div>
 
