@@ -8,7 +8,6 @@ if (!token) {
 }
 
 // --- Env & Session ---
-const MENU_LAYOUT = import.meta.env.VITE_MENU_LAYOUT || "side";
 const MODULE = import.meta.env.VITE_SIMPLICITE_MODULE || null;
 const BASE_URL = sessionStorage.getItem("simplicite_base_url"); // from main.js login
 const user = JSON.parse(sessionStorage.getItem("simplicite_user") || "{}"); // from main.js login
@@ -46,11 +45,7 @@ document.getElementById("logout-btn").addEventListener("click", () => {
 });
 
 // --- Menu rendering (dsfr) ---
-if (MENU_LAYOUT === "top") {
-  renderTopNav();
-} else {
-  renderSideNav();
-}
+renderSideNav();
 
 loadMenu();
 
@@ -91,7 +86,7 @@ async function loadMenu() {
     const domain = app.getBusinessObject("Domain");
     const domains = await domain.search();
 
-    const MODULE = import.meta.env.VITE_SIMPLICITE_MODULE || null;
+    // const MODULE = import.meta.env.VITE_SIMPLICITE_MODULE || null;
     const filtered = MODULE
       ? domains.filter((d) => d.row_module_id__mdl_name === MODULE)
       : domains;
@@ -109,8 +104,7 @@ async function loadMenu() {
       }),
     );
 
-    if (MENU_LAYOUT === "side") injectSideMenuItems(menuData);
-    else injectTopMenuItems(menuData);
+    injectSideMenuItems(menuData);
   } catch (err) {
     console.error("Erreur menu :", err);
   }
@@ -172,42 +166,6 @@ function injectSideMenuItems(menuData) {
       loadObjectList(objectName);
     });
   });
-}
-
-function injectTopMenuItems(domains) {
-  const list = document.querySelector(".fr-nav__list");
-  if (!list) return;
-
-  list.innerHTML = domains
-    .map(
-      (domain) => `
-    <li class="fr-nav__item">
-      <button
-        class="fr-nav__btn"
-        aria-expanded="false"
-        aria-controls="nav-${domain.obd_name}"
-      >
-        ${domain.obd_name}
-      </button>
-      <div id="nav-${domain.obd_name}" class="fr-collapse fr-menu">
-        <ul class="fr-menu__list">
-          ${(domain.items || [])
-            .map(
-              (item) => `
-            <li>
-              <a class="fr-nav__link" href="#" data-object="${item.name}">
-                ${item.label}
-              </a>
-            </li>
-          `,
-            )
-            .join("")}
-        </ul>
-      </div>
-    </li>
-  `,
-    )
-    .join("");
 }
 
 // --- Theme switcher ---
