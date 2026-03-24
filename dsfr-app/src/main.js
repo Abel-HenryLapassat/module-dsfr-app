@@ -102,8 +102,7 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
 
 // --- Theme switcher ---
 
-const currentScheme =
-  document.documentElement.getAttribute("data-fr-scheme") || "system";
+const currentScheme = "dark";
 const currentRadio = document.querySelector(
   `input[name="fr-radios-theme"][value="${currentScheme}"]`,
 );
