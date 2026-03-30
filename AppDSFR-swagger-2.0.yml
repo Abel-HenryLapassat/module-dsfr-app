@@ -33,6 +33,83 @@ paths:
         - token
       tags:
       - session
+  /rest/DsfrSociete:
+    get:
+      summary: Search DsfrSociete business object records or get contextualized metadata
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-dsfrsociete-search
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/ArrayOfDsfrSociete'
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: query
+        name: _metadata
+        description: Metadata?
+        type: boolean
+        required: false
+      - in: query
+        name: _count
+        description: Count?
+        type: boolean
+        required: false
+      - in: query
+        name: _doc
+        description: Documentation?
+        type: boolean
+        required: false
+      - in: query
+        name: dsfrSocNom
+        description: Search filter for Soc nom
+        type: string
+        required: false
+      - in: query
+        name: dsfrSocSite
+        description: Search filter for Soc site
+        type: string
+        required: false
+      - in: query
+        name: dsfrSocPrivee
+        description: Search filter for Soc privee
+        type: string
+        required: false
+        enum:
+        - PRV
+        - PUB
+      - in: query
+        name: dsfrSocLogo
+        description: Search filter for Soc logo
+        type: string
+        required: false
+      - in: query
+        name: dsfrSocSecteur
+        description: Search filter for Soc secteur
+        type: string
+        required: false
+        enum:
+        - AS
+        - A
+        - AC
+        - BTP
+        - JF
+        - TR
+        - T
+        - U
+      tags:
+      - DsfrSociete
   /logout:
     get:
       summary: Logout (revoke bearer token)
@@ -50,6 +127,410 @@ paths:
           description: Unauthorized
       tags:
       - session
+  /rest/DsfrEmploye:
+    get:
+      summary: Search DsfrEmploye business object records or get contextualized metadata
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-dsfremploye-search
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/ArrayOfDsfrEmploye'
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: query
+        name: _metadata
+        description: Metadata?
+        type: boolean
+        required: false
+      - in: query
+        name: _count
+        description: Count?
+        type: boolean
+        required: false
+      - in: query
+        name: _doc
+        description: Documentation?
+        type: boolean
+        required: false
+      - in: query
+        name: dsfrEmpId
+        description: Search filter for Emp id
+        type: integer
+        required: false
+      - in: query
+        name: dsfrEmpNom
+        description: Search filter for Emp nom
+        type: string
+        required: false
+      - in: query
+        name: dsfrEmpPrenom
+        description: Search filter for Emp prenom
+        type: string
+        required: false
+      - in: query
+        name: dsfrEmpTel
+        description: Search filter for Emp tel
+        type: string
+        required: false
+      - in: query
+        name: dsfrEmpMail
+        description: Search filter for Emp mail
+        type: string
+        required: false
+      - in: query
+        name: dsfrEmpSocId
+        description: Search filter for Emp soc id
+        type: string
+        required: false
+      - in: query
+        name: dsfrEmpSocId__dsfrSocNom
+        description: Search filter for Emp soc id Soc nom
+        type: string
+        required: false
+      - in: query
+        name: dsfrEmpSocId__dsfrSocLogo
+        description: Search filter for Emp soc id Soc logo
+        type: string
+        required: false
+      tags:
+      - DsfrEmploye
+  /rest/DsfrEmploye/{row_id}:
+    post:
+      summary: Create a new DsfrEmploye business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-dsfremploye-create
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/DsfrEmploye'
+          description: Success in creating a new business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/DsfrEmploye'
+        in: body
+        name: body
+      tags:
+      - DsfrEmploye
+      consumes:
+      - application/json
+    get:
+      summary: Get a DsfrEmploye business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-dsfremploye-get
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/DsfrEmploye'
+          description: Success in getting a single business object record
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - in: query
+        name: _inline_documents
+        description: Inline documents?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_objects
+        description: Inline objects?
+        type: boolean
+        required: false
+      tags:
+      - DsfrEmploye
+    delete:
+      summary: Delete a DsfrEmploye business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-dsfremploye-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - DsfrEmploye
+    put:
+      summary: Update a DsfrEmploye business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-dsfremploye-update
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/DsfrEmploye'
+          description: Success in updating a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/DsfrEmploye'
+        in: body
+        name: body
+      tags:
+      - DsfrEmploye
+      consumes:
+      - application/json
+  /rest/DsfrSociete/{row_id}:
+    post:
+      summary: Create a new DsfrSociete business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-dsfrsociete-create
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/DsfrSociete'
+          description: Success in creating a new business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/DsfrSociete'
+        in: body
+        name: body
+      tags:
+      - DsfrSociete
+      consumes:
+      - application/json
+    get:
+      summary: Get a DsfrSociete business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-dsfrsociete-get
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/DsfrSociete'
+          description: Success in getting a single business object record
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - in: query
+        name: _inline_documents
+        description: Inline documents?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_objects
+        description: Inline objects?
+        type: boolean
+        required: false
+      tags:
+      - DsfrSociete
+    delete:
+      summary: Delete a DsfrSociete business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-dsfrsociete-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - DsfrSociete
+    put:
+      summary: Update a DsfrSociete business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-dsfrsociete-update
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/DsfrSociete'
+          description: Success in updating a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/DsfrSociete'
+        in: body
+        name: body
+      tags:
+      - DsfrSociete
+      consumes:
+      - application/json
   /:
     get:
       summary: Get user session information
@@ -93,19 +574,55 @@ definitions:
         type: integer
         enum:
         - 404
-  ActionResult:
-    description: Action result
+  DsfrSociete:
+    description: Company
     type: object
     properties:
-      result:
-        description: Action result
-        type: string
-  TreeviewData:
-    type: object
-    properties:
-      item:
-        description: Object item with lists of linked objects' items
+      dsfrSocLogo:
+        description: Soc logo
         type: object
+      dsfrSocSite:
+        description: Soc site
+        type: string
+        maxLength: 100
+      dsfrSocSecteur:
+        description: Soc secteur
+        type: string
+        maxLength: 100
+        enum:
+        - AS
+        - A
+        - AC
+        - BTP
+        - JF
+        - TR
+        - T
+        - U
+      dsfrSocNom:
+        description: Soc nom
+        type: string
+        maxLength: 100
+      row_id:
+        description: Unique technical row ID
+        type: string
+        maxLength: 11
+      dsfrSocPrivee:
+        description: Soc privee
+        type: string
+        maxLength: 100
+        enum:
+        - PRV
+        - PUB
+  ArrayOfDsfrSociete:
+    description: List of Company
+    type: array
+    items:
+      $ref: '#/definitions/DsfrSociete'
+  ArrayOfDsfrEmploye:
+    description: List of Employee
+    type: array
+    items:
+      $ref: '#/definitions/DsfrEmploye'
   PublicationResult:
     description: Publication result
     type: object
@@ -138,6 +655,69 @@ definitions:
       label3:
         description: 'Label #3'
         type: string
+  PlaceMapData:
+    description: Places map data
+    type: object
+    properties:
+      places:
+        description: Places
+        type: array
+        items:
+          $ref: '#/definitions/PlaceData'
+      name:
+        description: Name
+        type: string
+  DsfrEmploye:
+    description: Employee
+    type: object
+    properties:
+      dsfrEmpTel:
+        description: Emp tel
+        type: string
+        maxLength: 100
+      dsfrEmpNom:
+        description: Emp nom
+        type: string
+        maxLength: 100
+      dsfrEmpPrenom:
+        description: Emp prenom
+        type: string
+        maxLength: 100
+      dsfrEmpSocId__dsfrSocNom:
+        description: Emp soc id Soc nom
+        type: string
+        maxLength: 100
+      row_id:
+        description: Unique technical row ID
+        type: string
+        maxLength: 11
+      dsfrEmpSocId__dsfrSocLogo:
+        description: Emp soc id Soc logo
+        type: object
+      dsfrEmpId:
+        description: Emp id
+        type: integer
+      dsfrEmpMail:
+        description: Emp mail
+        type: string
+        maxLength: 100
+      dsfrEmpSocId:
+        description: Emp soc id
+        type: string
+        maxLength: 11
+  ActionResult:
+    description: Action result
+    type: object
+    properties:
+      result:
+        description: Action result
+        type: string
+  TreeviewData:
+    type: object
+    properties:
+      item:
+        description: Object item with lists of linked objects' items
+        type: object
   Error400:
     description: Bad request
     type: object
@@ -174,18 +754,6 @@ definitions:
         type: integer
         enum:
         - 500
-  PlaceMapData:
-    description: Places map data
-    type: object
-    properties:
-      places:
-        description: Places
-        type: array
-        items:
-          $ref: '#/definitions/PlaceData'
-      name:
-        description: Name
-        type: string
   Error403:
     description: Forbidden
     type: object
@@ -210,3 +778,8 @@ info:
   description: API for module AppDSFR
   title: AppDSFR
   version: '0.1'
+tags:
+- name: DsfrEmploye
+  description: Employee
+- name: DsfrSociete
+  description: Company

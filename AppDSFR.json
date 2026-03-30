@@ -76,6 +76,1039 @@
    ]
   },
   {
+   "object": "FieldList",
+   "label": "List of values",
+   "icon": "img/system/list_of_values",
+   "field": "row_module_id",
+   "list": [
+    {
+     "object": "FieldList",
+     "userkey": "DSFR_OPP_STATUT",
+     "item": {
+      "lov_name": "DSFR_OPP_STATUT",
+      "lov_navbar": null,
+      "lov_navbar_opt": null,
+      "row_module_id__mdl_name": "AppDSFR",
+      "lov_model_id__mod_name": null,
+      "lov_selectall_opt": null
+     }
+    },
+    {
+     "object": "FieldList",
+     "userkey": "DSFR_SOC_PRIVEE",
+     "item": {
+      "lov_name": "DSFR_SOC_PRIVEE",
+      "lov_navbar": null,
+      "lov_navbar_opt": null,
+      "row_module_id__mdl_name": "AppDSFR",
+      "lov_model_id__mod_name": null,
+      "lov_selectall_opt": null
+     }
+    },
+    {
+     "object": "FieldList",
+     "userkey": "DSFR_SOC_SECTEUR",
+     "item": {
+      "lov_name": "DSFR_SOC_SECTEUR",
+      "lov_navbar": null,
+      "lov_navbar_opt": null,
+      "row_module_id__mdl_name": "AppDSFR",
+      "lov_model_id__mod_name": null,
+      "lov_selectall_opt": null
+     }
+    }
+   ]
+  },
+  {
+   "object": "FieldListCode",
+   "label": "List code",
+   "icon": "img/system/list_of_values",
+   "field": "row_module_id",
+   "list": [
+    {
+     "object": "FieldListCode",
+     "userkey": "DSFR_SOC_PRIVEE~PRV",
+     "item": {
+      "lov_list_id__lov_name": "DSFR_SOC_PRIVEE",
+      "lov_code": "PRV",
+      "lov_order_by": 10,
+      "lov_label": "Privée",
+      "row_module_id__mdl_name": "AppDSFR",
+      "lov_color": null,
+      "lov_color_bg": null,
+      "lov_icon": null,
+      "lov_display": ["L"]
+     }
+    },
+    {
+     "object": "FieldListCode",
+     "userkey": "DSFR_SOC_PRIVEE~PUB",
+     "item": {
+      "lov_list_id__lov_name": "DSFR_SOC_PRIVEE",
+      "lov_code": "PUB",
+      "lov_order_by": 20,
+      "lov_label": "Publique",
+      "row_module_id__mdl_name": "AppDSFR",
+      "lov_color": null,
+      "lov_color_bg": null,
+      "lov_icon": null,
+      "lov_display": ["L"]
+     }
+    },
+    {
+     "object": "FieldListCode",
+     "userkey": "DSFR_SOC_SECTEUR~AS",
+     "item": {
+      "lov_list_id__lov_name": "DSFR_SOC_SECTEUR",
+      "lov_code": "AS",
+      "lov_order_by": 10,
+      "lov_label": "Activité de services",
+      "row_module_id__mdl_name": "AppDSFR",
+      "lov_color": null,
+      "lov_color_bg": null,
+      "lov_icon": null,
+      "lov_display": ["L"]
+     }
+    },
+    {
+     "object": "FieldListCode",
+     "userkey": "DSFR_SOC_SECTEUR~A",
+     "item": {
+      "lov_list_id__lov_name": "DSFR_SOC_SECTEUR",
+      "lov_code": "A",
+      "lov_order_by": 20,
+      "lov_label": "Agriculture",
+      "row_module_id__mdl_name": "AppDSFR",
+      "lov_color": null,
+      "lov_color_bg": null,
+      "lov_icon": null,
+      "lov_display": ["L"]
+     }
+    },
+    {
+     "object": "FieldListCode",
+     "userkey": "DSFR_SOC_SECTEUR~AC",
+     "item": {
+      "lov_list_id__lov_name": "DSFR_SOC_SECTEUR",
+      "lov_code": "AC",
+      "lov_order_by": 30,
+      "lov_label": "Arts et culture",
+      "row_module_id__mdl_name": "AppDSFR",
+      "lov_color": null,
+      "lov_color_bg": null,
+      "lov_icon": null,
+      "lov_display": ["L"]
+     }
+    },
+    {
+     "object": "FieldListCode",
+     "userkey": "DSFR_SOC_SECTEUR~BTP",
+     "item": {
+      "lov_list_id__lov_name": "DSFR_SOC_SECTEUR",
+      "lov_code": "BTP",
+      "lov_order_by": 40,
+      "lov_label": "Bâtiment et travaux publiques",
+      "row_module_id__mdl_name": "AppDSFR",
+      "lov_color": null,
+      "lov_color_bg": null,
+      "lov_icon": null,
+      "lov_display": ["L"]
+     }
+    },
+    {
+     "object": "FieldListCode",
+     "userkey": "DSFR_SOC_SECTEUR~JF",
+     "item": {
+      "lov_list_id__lov_name": "DSFR_SOC_SECTEUR",
+      "lov_code": "JF",
+      "lov_order_by": 50,
+      "lov_label": "Juridique et financier",
+      "row_module_id__mdl_name": "AppDSFR",
+      "lov_color": null,
+      "lov_color_bg": null,
+      "lov_icon": null,
+      "lov_display": ["L"]
+     }
+    },
+    {
+     "object": "FieldListCode",
+     "userkey": "DSFR_SOC_SECTEUR~TR",
+     "item": {
+      "lov_list_id__lov_name": "DSFR_SOC_SECTEUR",
+      "lov_code": "TR",
+      "lov_order_by": 60,
+      "lov_label": "Tourisme - Restauration",
+      "row_module_id__mdl_name": "AppDSFR",
+      "lov_color": null,
+      "lov_color_bg": null,
+      "lov_icon": null,
+      "lov_display": ["L"]
+     }
+    },
+    {
+     "object": "FieldListCode",
+     "userkey": "DSFR_SOC_SECTEUR~T",
+     "item": {
+      "lov_list_id__lov_name": "DSFR_SOC_SECTEUR",
+      "lov_code": "T",
+      "lov_order_by": 70,
+      "lov_label": "Transports",
+      "row_module_id__mdl_name": "AppDSFR",
+      "lov_color": null,
+      "lov_color_bg": null,
+      "lov_icon": null,
+      "lov_display": ["L"]
+     }
+    },
+    {
+     "object": "FieldListCode",
+     "userkey": "DSFR_SOC_SECTEUR~U",
+     "item": {
+      "lov_list_id__lov_name": "DSFR_SOC_SECTEUR",
+      "lov_code": "U",
+      "lov_order_by": 80,
+      "lov_label": "Urbanisme",
+      "row_module_id__mdl_name": "AppDSFR",
+      "lov_color": null,
+      "lov_color_bg": null,
+      "lov_icon": null,
+      "lov_display": ["L"]
+     }
+    }
+   ]
+  },
+  {
+   "object": "FieldListValue",
+   "label": "Translated list value",
+   "icon": "img/system/translation",
+   "field": "row_module_id",
+   "list": [
+    {
+     "object": "FieldListValue",
+     "userkey": "DSFR_SOC_PRIVEE~PRV~ENU",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "DSFR_SOC_PRIVEE",
+      "lov_code_id__lov_code": "PRV",
+      "lov_lang": "ENU",
+      "lov_value": "Prv",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "DSFR_SOC_PRIVEE~PUB~ENU",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "DSFR_SOC_PRIVEE",
+      "lov_code_id__lov_code": "PUB",
+      "lov_lang": "ENU",
+      "lov_value": "Pub",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "DSFR_SOC_PRIVEE~PRV~FRA",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "DSFR_SOC_PRIVEE",
+      "lov_code_id__lov_code": "PRV",
+      "lov_lang": "FRA",
+      "lov_value": "Privée",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "DSFR_SOC_PRIVEE~PUB~FRA",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "DSFR_SOC_PRIVEE",
+      "lov_code_id__lov_code": "PUB",
+      "lov_lang": "FRA",
+      "lov_value": "Publique",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "DSFR_SOC_SECTEUR~A~ENU",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "DSFR_SOC_SECTEUR",
+      "lov_code_id__lov_code": "A",
+      "lov_lang": "ENU",
+      "lov_value": "A",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "DSFR_SOC_SECTEUR~AS~ENU",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "DSFR_SOC_SECTEUR",
+      "lov_code_id__lov_code": "AS",
+      "lov_lang": "ENU",
+      "lov_value": "As",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "DSFR_SOC_SECTEUR~AC~ENU",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "DSFR_SOC_SECTEUR",
+      "lov_code_id__lov_code": "AC",
+      "lov_lang": "ENU",
+      "lov_value": "Ac",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "DSFR_SOC_SECTEUR~BTP~ENU",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "DSFR_SOC_SECTEUR",
+      "lov_code_id__lov_code": "BTP",
+      "lov_lang": "ENU",
+      "lov_value": "Btp",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "DSFR_SOC_SECTEUR~JF~ENU",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "DSFR_SOC_SECTEUR",
+      "lov_code_id__lov_code": "JF",
+      "lov_lang": "ENU",
+      "lov_value": "Jf",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "DSFR_SOC_SECTEUR~TR~ENU",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "DSFR_SOC_SECTEUR",
+      "lov_code_id__lov_code": "TR",
+      "lov_lang": "ENU",
+      "lov_value": "Tr",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "DSFR_SOC_SECTEUR~T~ENU",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "DSFR_SOC_SECTEUR",
+      "lov_code_id__lov_code": "T",
+      "lov_lang": "ENU",
+      "lov_value": "T",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "DSFR_SOC_SECTEUR~U~ENU",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "DSFR_SOC_SECTEUR",
+      "lov_code_id__lov_code": "U",
+      "lov_lang": "ENU",
+      "lov_value": "U",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "DSFR_SOC_SECTEUR~A~FRA",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "DSFR_SOC_SECTEUR",
+      "lov_code_id__lov_code": "A",
+      "lov_lang": "FRA",
+      "lov_value": "Agriculture",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "DSFR_SOC_SECTEUR~AS~FRA",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "DSFR_SOC_SECTEUR",
+      "lov_code_id__lov_code": "AS",
+      "lov_lang": "FRA",
+      "lov_value": "Activité de services",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "DSFR_SOC_SECTEUR~AC~FRA",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "DSFR_SOC_SECTEUR",
+      "lov_code_id__lov_code": "AC",
+      "lov_lang": "FRA",
+      "lov_value": "Arts et culture",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "DSFR_SOC_SECTEUR~BTP~FRA",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "DSFR_SOC_SECTEUR",
+      "lov_code_id__lov_code": "BTP",
+      "lov_lang": "FRA",
+      "lov_value": "Bâtiment et travaux publiques",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "DSFR_SOC_SECTEUR~JF~FRA",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "DSFR_SOC_SECTEUR",
+      "lov_code_id__lov_code": "JF",
+      "lov_lang": "FRA",
+      "lov_value": "Juridique et financier",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "DSFR_SOC_SECTEUR~TR~FRA",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "DSFR_SOC_SECTEUR",
+      "lov_code_id__lov_code": "TR",
+      "lov_lang": "FRA",
+      "lov_value": "Tourisme - Restauration",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "DSFR_SOC_SECTEUR~T~FRA",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "DSFR_SOC_SECTEUR",
+      "lov_code_id__lov_code": "T",
+      "lov_lang": "FRA",
+      "lov_value": "Transports",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "FieldListValue",
+     "userkey": "DSFR_SOC_SECTEUR~U~FRA",
+     "item": {
+      "lov_code_id__lov_list_id__lov_name": "DSFR_SOC_SECTEUR",
+      "lov_code_id__lov_code": "U",
+      "lov_lang": "FRA",
+      "lov_value": "Urbanisme",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    }
+   ]
+  },
+  {
+   "object": "Field",
+   "label": "Fields",
+   "icon": "img/system/field",
+   "field": "row_module_id",
+   "list": [
+    {
+     "object": "Field",
+     "userkey": "dsfrEmpId",
+     "item": {
+      "fld_name": "dsfrEmpId",
+      "fld_dbname": "dsfr_emp_id",
+      "fld_visible": "3",
+      "fld_updatable": [
+       "3",
+       "2"
+      ],
+      "fld_required": true,
+      "fld_fonctid": true,
+      "fld_research": "1",
+      "fld_researchreq": "0",
+      "fld_sort": "C",
+      "fld_more": false,
+      "fld_listmore": false,
+      "fld_listsum": null,
+      "fld_exportable": true,
+      "fld_tray": null,
+      "fld_type": "1",
+      "fld_type_id__flt_code": null,
+      "fld_list_id__lov_name": null,
+      "fld_copy": true,
+      "fld_size": 11,
+      "fld_minsize": null,
+      "fld_precision": null,
+      "fld_fromdate_id__fld_name": null,
+      "fld_dfault": null,
+      "fld_indexable": false,
+      "fld_autocomp": "0",
+      "fld_groupby": false,
+      "fld_updall": true,
+      "fld_case": null,
+      "fld_righttoleft": false,
+      "fld_rendering": null,
+      "fld_speech": null,
+      "fld_calc": null,
+      "fld_objlist": null,
+      "fld_comment": null,
+      "fld_classification": null,
+      "fld_anon": null,
+      "row_module_id__mdl_name": "AppDSFR",
+      "fld_incrementsyntax": null
+     }
+    },
+    {
+     "object": "Field",
+     "userkey": "dsfrEmpMail",
+     "item": {
+      "fld_name": "dsfrEmpMail",
+      "fld_dbname": "dsfr_emp_mail",
+      "fld_visible": "3",
+      "fld_updatable": [
+       "3",
+       "2"
+      ],
+      "fld_required": true,
+      "fld_fonctid": false,
+      "fld_research": "1",
+      "fld_researchreq": "0",
+      "fld_sort": "C",
+      "fld_more": false,
+      "fld_listmore": false,
+      "fld_listsum": null,
+      "fld_exportable": true,
+      "fld_tray": null,
+      "fld_type": "12",
+      "fld_type_id__flt_code": null,
+      "fld_list_id__lov_name": null,
+      "fld_copy": true,
+      "fld_size": 100,
+      "fld_minsize": null,
+      "fld_precision": null,
+      "fld_fromdate_id__fld_name": null,
+      "fld_dfault": null,
+      "fld_indexable": false,
+      "fld_autocomp": "0",
+      "fld_groupby": false,
+      "fld_updall": true,
+      "fld_case": null,
+      "fld_righttoleft": false,
+      "fld_rendering": null,
+      "fld_speech": null,
+      "fld_calc": null,
+      "fld_objlist": null,
+      "fld_comment": null,
+      "fld_classification": null,
+      "fld_anon": null,
+      "row_module_id__mdl_name": "AppDSFR",
+      "fld_incrementsyntax": null
+     }
+    },
+    {
+     "object": "Field",
+     "userkey": "dsfrEmpNom",
+     "item": {
+      "fld_name": "dsfrEmpNom",
+      "fld_dbname": "dsfr_emp_nom",
+      "fld_visible": "3",
+      "fld_updatable": [
+       "3",
+       "2"
+      ],
+      "fld_required": false,
+      "fld_fonctid": false,
+      "fld_research": "1",
+      "fld_researchreq": "0",
+      "fld_sort": "C",
+      "fld_more": false,
+      "fld_listmore": false,
+      "fld_listsum": null,
+      "fld_exportable": true,
+      "fld_tray": null,
+      "fld_type": "3",
+      "fld_type_id__flt_code": null,
+      "fld_list_id__lov_name": null,
+      "fld_copy": true,
+      "fld_size": 100,
+      "fld_minsize": null,
+      "fld_precision": null,
+      "fld_fromdate_id__fld_name": null,
+      "fld_dfault": null,
+      "fld_indexable": false,
+      "fld_autocomp": "0",
+      "fld_groupby": false,
+      "fld_updall": true,
+      "fld_case": null,
+      "fld_righttoleft": false,
+      "fld_rendering": null,
+      "fld_speech": null,
+      "fld_calc": null,
+      "fld_objlist": null,
+      "fld_comment": null,
+      "fld_classification": null,
+      "fld_anon": null,
+      "row_module_id__mdl_name": "AppDSFR",
+      "fld_incrementsyntax": null
+     }
+    },
+    {
+     "object": "Field",
+     "userkey": "dsfrEmpPrenom",
+     "item": {
+      "fld_name": "dsfrEmpPrenom",
+      "fld_dbname": "dsfr_emp_prenom",
+      "fld_visible": "3",
+      "fld_updatable": [
+       "3",
+       "2"
+      ],
+      "fld_required": false,
+      "fld_fonctid": false,
+      "fld_research": "1",
+      "fld_researchreq": "0",
+      "fld_sort": "C",
+      "fld_more": false,
+      "fld_listmore": false,
+      "fld_listsum": null,
+      "fld_exportable": true,
+      "fld_tray": null,
+      "fld_type": "3",
+      "fld_type_id__flt_code": null,
+      "fld_list_id__lov_name": null,
+      "fld_copy": true,
+      "fld_size": 100,
+      "fld_minsize": null,
+      "fld_precision": null,
+      "fld_fromdate_id__fld_name": null,
+      "fld_dfault": null,
+      "fld_indexable": false,
+      "fld_autocomp": "0",
+      "fld_groupby": false,
+      "fld_updall": true,
+      "fld_case": null,
+      "fld_righttoleft": false,
+      "fld_rendering": null,
+      "fld_speech": null,
+      "fld_calc": null,
+      "fld_objlist": null,
+      "fld_comment": null,
+      "fld_classification": null,
+      "fld_anon": null,
+      "row_module_id__mdl_name": "AppDSFR",
+      "fld_incrementsyntax": null
+     }
+    },
+    {
+     "object": "Field",
+     "userkey": "dsfrEmpSocId",
+     "item": {
+      "fld_name": "dsfrEmpSocId",
+      "fld_dbname": "dsfr_emp_soc_id",
+      "fld_visible": "3",
+      "fld_updatable": [
+       "2",
+       "3"
+      ],
+      "fld_required": true,
+      "fld_fonctid": false,
+      "fld_research": "1",
+      "fld_researchreq": "0",
+      "fld_sort": "C",
+      "fld_more": false,
+      "fld_listmore": false,
+      "fld_listsum": null,
+      "fld_exportable": true,
+      "fld_tray": null,
+      "fld_type": "0",
+      "fld_type_id__flt_code": null,
+      "fld_list_id__lov_name": null,
+      "fld_copy": true,
+      "fld_size": 11,
+      "fld_minsize": null,
+      "fld_precision": null,
+      "fld_fromdate_id__fld_name": null,
+      "fld_dfault": null,
+      "fld_indexable": false,
+      "fld_autocomp": "0",
+      "fld_groupby": false,
+      "fld_updall": true,
+      "fld_case": null,
+      "fld_righttoleft": false,
+      "fld_rendering": null,
+      "fld_speech": null,
+      "fld_calc": null,
+      "fld_objlist": null,
+      "fld_comment": null,
+      "fld_classification": null,
+      "fld_anon": null,
+      "row_module_id__mdl_name": "AppDSFR",
+      "fld_incrementsyntax": null
+     }
+    },
+    {
+     "object": "Field",
+     "userkey": "dsfrEmpTel",
+     "item": {
+      "fld_name": "dsfrEmpTel",
+      "fld_dbname": "dsfr_emp_tel",
+      "fld_visible": "3",
+      "fld_updatable": [
+       "3",
+       "2"
+      ],
+      "fld_required": false,
+      "fld_fonctid": false,
+      "fld_research": "1",
+      "fld_researchreq": "0",
+      "fld_sort": "C",
+      "fld_more": false,
+      "fld_listmore": false,
+      "fld_listsum": null,
+      "fld_exportable": true,
+      "fld_tray": null,
+      "fld_type": "22",
+      "fld_type_id__flt_code": null,
+      "fld_list_id__lov_name": null,
+      "fld_copy": true,
+      "fld_size": 100,
+      "fld_minsize": null,
+      "fld_precision": null,
+      "fld_fromdate_id__fld_name": null,
+      "fld_dfault": null,
+      "fld_indexable": false,
+      "fld_autocomp": "0",
+      "fld_groupby": false,
+      "fld_updall": true,
+      "fld_case": null,
+      "fld_righttoleft": false,
+      "fld_rendering": null,
+      "fld_speech": null,
+      "fld_calc": null,
+      "fld_objlist": null,
+      "fld_comment": null,
+      "fld_classification": null,
+      "fld_anon": null,
+      "row_module_id__mdl_name": "AppDSFR",
+      "fld_incrementsyntax": null
+     }
+    },
+    {
+     "object": "Field",
+     "userkey": "dsfrSocLogo",
+     "item": {
+      "fld_name": "dsfrSocLogo",
+      "fld_dbname": "dsfr_soc_logo",
+      "fld_visible": "3",
+      "fld_updatable": [
+       "3",
+       "2"
+      ],
+      "fld_required": false,
+      "fld_fonctid": false,
+      "fld_research": null,
+      "fld_researchreq": null,
+      "fld_sort": "C",
+      "fld_more": false,
+      "fld_listmore": false,
+      "fld_listsum": null,
+      "fld_exportable": true,
+      "fld_tray": null,
+      "fld_type": "20",
+      "fld_type_id__flt_code": null,
+      "fld_list_id__lov_name": null,
+      "fld_copy": true,
+      "fld_size": 11,
+      "fld_minsize": null,
+      "fld_precision": null,
+      "fld_fromdate_id__fld_name": null,
+      "fld_dfault": null,
+      "fld_indexable": false,
+      "fld_autocomp": "0",
+      "fld_groupby": false,
+      "fld_updall": true,
+      "fld_case": null,
+      "fld_righttoleft": false,
+      "fld_rendering": null,
+      "fld_speech": null,
+      "fld_calc": null,
+      "fld_objlist": null,
+      "fld_comment": null,
+      "fld_classification": null,
+      "fld_anon": null,
+      "row_module_id__mdl_name": "AppDSFR",
+      "fld_incrementsyntax": null
+     }
+    },
+    {
+     "object": "Field",
+     "userkey": "dsfrSocNom",
+     "item": {
+      "fld_name": "dsfrSocNom",
+      "fld_dbname": "dsfr_soc_nom",
+      "fld_visible": "3",
+      "fld_updatable": [
+       "3",
+       "2"
+      ],
+      "fld_required": true,
+      "fld_fonctid": true,
+      "fld_research": "1",
+      "fld_researchreq": "0",
+      "fld_sort": "C",
+      "fld_more": false,
+      "fld_listmore": false,
+      "fld_listsum": null,
+      "fld_exportable": true,
+      "fld_tray": null,
+      "fld_type": "3",
+      "fld_type_id__flt_code": null,
+      "fld_list_id__lov_name": null,
+      "fld_copy": true,
+      "fld_size": 100,
+      "fld_minsize": null,
+      "fld_precision": null,
+      "fld_fromdate_id__fld_name": null,
+      "fld_dfault": null,
+      "fld_indexable": false,
+      "fld_autocomp": "0",
+      "fld_groupby": false,
+      "fld_updall": true,
+      "fld_case": null,
+      "fld_righttoleft": false,
+      "fld_rendering": null,
+      "fld_speech": null,
+      "fld_calc": null,
+      "fld_objlist": null,
+      "fld_comment": null,
+      "fld_classification": null,
+      "fld_anon": null,
+      "row_module_id__mdl_name": "AppDSFR",
+      "fld_incrementsyntax": null
+     }
+    },
+    {
+     "object": "Field",
+     "userkey": "dsfrSocPrivee",
+     "item": {
+      "fld_name": "dsfrSocPrivee",
+      "fld_dbname": "dsfr_soc_privee",
+      "fld_visible": "3",
+      "fld_updatable": [
+       "3",
+       "2"
+      ],
+      "fld_required": true,
+      "fld_fonctid": false,
+      "fld_research": "1",
+      "fld_researchreq": "0",
+      "fld_sort": "C",
+      "fld_more": false,
+      "fld_listmore": false,
+      "fld_listsum": null,
+      "fld_exportable": true,
+      "fld_tray": null,
+      "fld_type": "7",
+      "fld_type_id__flt_code": null,
+      "fld_list_id__lov_name": "DSFR_SOC_PRIVEE",
+      "fld_copy": true,
+      "fld_size": 100,
+      "fld_minsize": null,
+      "fld_precision": null,
+      "fld_fromdate_id__fld_name": null,
+      "fld_dfault": null,
+      "fld_indexable": false,
+      "fld_autocomp": "0",
+      "fld_groupby": false,
+      "fld_updall": true,
+      "fld_case": null,
+      "fld_righttoleft": false,
+      "fld_rendering": null,
+      "fld_speech": null,
+      "fld_calc": null,
+      "fld_objlist": null,
+      "fld_comment": null,
+      "fld_classification": null,
+      "fld_anon": null,
+      "row_module_id__mdl_name": "AppDSFR",
+      "fld_incrementsyntax": null
+     }
+    },
+    {
+     "object": "Field",
+     "userkey": "dsfrSocSecteur",
+     "item": {
+      "fld_name": "dsfrSocSecteur",
+      "fld_dbname": "dsfr_soc_secteur",
+      "fld_visible": "3",
+      "fld_updatable": [
+       "3",
+       "2"
+      ],
+      "fld_required": true,
+      "fld_fonctid": false,
+      "fld_research": "1",
+      "fld_researchreq": "0",
+      "fld_sort": "C",
+      "fld_more": false,
+      "fld_listmore": false,
+      "fld_listsum": null,
+      "fld_exportable": true,
+      "fld_tray": null,
+      "fld_type": "7",
+      "fld_type_id__flt_code": null,
+      "fld_list_id__lov_name": "DSFR_SOC_SECTEUR",
+      "fld_copy": true,
+      "fld_size": 100,
+      "fld_minsize": null,
+      "fld_precision": null,
+      "fld_fromdate_id__fld_name": null,
+      "fld_dfault": null,
+      "fld_indexable": false,
+      "fld_autocomp": "0",
+      "fld_groupby": false,
+      "fld_updall": true,
+      "fld_case": null,
+      "fld_righttoleft": false,
+      "fld_rendering": null,
+      "fld_speech": null,
+      "fld_calc": null,
+      "fld_objlist": null,
+      "fld_comment": null,
+      "fld_classification": null,
+      "fld_anon": null,
+      "row_module_id__mdl_name": "AppDSFR",
+      "fld_incrementsyntax": null
+     }
+    },
+    {
+     "object": "Field",
+     "userkey": "dsfrSocSite",
+     "item": {
+      "fld_name": "dsfrSocSite",
+      "fld_dbname": "dsfr_soc_site",
+      "fld_visible": "3",
+      "fld_updatable": [
+       "3",
+       "2"
+      ],
+      "fld_required": false,
+      "fld_fonctid": false,
+      "fld_research": "1",
+      "fld_researchreq": "0",
+      "fld_sort": "C",
+      "fld_more": false,
+      "fld_listmore": false,
+      "fld_listsum": null,
+      "fld_exportable": true,
+      "fld_tray": null,
+      "fld_type": "10",
+      "fld_type_id__flt_code": null,
+      "fld_list_id__lov_name": null,
+      "fld_copy": true,
+      "fld_size": 100,
+      "fld_minsize": null,
+      "fld_precision": null,
+      "fld_fromdate_id__fld_name": null,
+      "fld_dfault": null,
+      "fld_indexable": false,
+      "fld_autocomp": "0",
+      "fld_groupby": false,
+      "fld_updall": true,
+      "fld_case": null,
+      "fld_righttoleft": false,
+      "fld_rendering": null,
+      "fld_speech": null,
+      "fld_calc": null,
+      "fld_objlist": null,
+      "fld_comment": null,
+      "fld_classification": null,
+      "fld_anon": null,
+      "row_module_id__mdl_name": "AppDSFR",
+      "fld_incrementsyntax": null
+     }
+    }
+   ]
+  },
+  {
+   "object": "Template",
+   "label": "Templates",
+   "icon": "img/system/template",
+   "field": "row_module_id",
+   "list": [
+    {
+     "object": "Template",
+     "userkey": "DsfrEmploye",
+     "item": {
+      "tpl_name": "DsfrEmploye",
+      "tpl_ui": "<div class=\"row\">\n  <div class=\"col-sm-8\">\n    <div class=\"area\" data-area=\"1\"><\/div>\n  <\/div>\n  <div class=\"col-sm-4\">\n    <div class=\"area\" data-area=\"2\"><\/div>\n  <\/div>\n<\/div>",
+      "tpl_min": null,
+      "tpl_image": null,
+      "tpl_grid": null,
+      "tpl_context": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "Template",
+     "userkey": "DsfrSociete",
+     "item": {
+      "tpl_name": "DsfrSociete",
+      "tpl_ui": "<div class=\"area\" data-area=\"1\"><\/div>",
+      "tpl_min": null,
+      "tpl_image": null,
+      "tpl_grid": null,
+      "tpl_context": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    }
+   ]
+  },
+  {
+   "object": "ObjectFieldArea",
+   "label": "Fields areas",
+   "icon": "img/system/field_area",
+   "field": "row_module_id",
+   "list": [
+    {
+     "object": "ObjectFieldArea",
+     "userkey": "DsfrEmploye-1",
+     "item": {
+      "ofa_name": "DsfrEmploye-1",
+      "ofa_position": 1,
+      "ofa_title": true,
+      "ofa_ui": "<div class=\"row\">\n  <div class=\"col-sm-4\">\n    <div class=\"field\" data-field=\"dsfrEmpId\"><\/div>\n  <\/div>\n  <div class=\"col-sm-4\">\n    <div class=\"field\" data-field=\"dsfrEmpPrenom\"><\/div>\n    <div class=\"field\" data-field=\"dsfrEmpNom\"><\/div>\n  <\/div>\n  <div class=\"col-sm-4\">\n    <div class=\"field\" data-field=\"dsfrEmpMail\"><\/div>\n    <div class=\"field\" data-field=\"dsfrEmpTel\"><\/div>\n  <\/div>\n<\/div>",
+      "ofa_icon": "icon/dsfr/icons/system/information",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "ObjectFieldArea",
+     "userkey": "DsfrEmploye-2",
+     "item": {
+      "ofa_name": "DsfrEmploye-2",
+      "ofa_position": 2,
+      "ofa_title": true,
+      "ofa_ui": "<div>\n  <div class=\"field\" data-field=\"dsfrEmpSocId\"><\/div>\n  <div class=\"field\" data-field=\"dsfrEmpSocId__dsfrSocNom\"><\/div>\n  <div class=\"field\" data-field=\"dsfrEmpSocId__dsfrSocLogo\"><\/div>\n<\/div>",
+      "ofa_icon": "icon/dsfr/icons/buildings/hotel",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "ObjectFieldArea",
+     "userkey": "DsfrSociete-1",
+     "item": {
+      "ofa_name": "DsfrSociete-1",
+      "ofa_position": 1,
+      "ofa_title": true,
+      "ofa_ui": "<div class=\"row\">\n  <div class=\"col-sm-3\">\n    <div class=\"field\" data-field=\"dsfrSocNom\"><\/div>\n  <\/div>\n  <div class=\"col-sm-3\">\n    <div class=\"field\" data-field=\"dsfrSocPrivee\"><\/div>\n    <div class=\"field\" data-field=\"dsfrSocSecteur\"><\/div>\n  <\/div>\n  <div class=\"col-sm-3\">\n    <div class=\"field\" data-field=\"dsfrSocLogo\"><\/div>\n  <\/div>\n  <div class=\"col-sm-3\">\n    <div class=\"field\" data-field=\"dsfrSocSite\"><\/div>\n  <\/div>\n<\/div>",
+      "ofa_icon": "icon/dsfr/icons/system/information",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    }
+   ]
+  },
+  {
    "object": "Domain",
    "label": "Domains",
    "icon": "img/system/domain",
@@ -97,6 +1130,895 @@
    }]
   },
   {
+   "object": "ObjectInternal",
+   "label": "Business objects",
+   "icon": "img/system/business_object",
+   "field": "row_module_id",
+   "list": [
+    {
+     "object": "ObjectInternal",
+     "userkey": "DsfrEmploye",
+     "item": {
+      "obo_name": "DsfrEmploye",
+      "obo_dbtable": "dsfr_employe",
+      "obo_role": "OBJ",
+      "obo_class": null,
+      "obo_script_id": null,
+      "obo_usets": "1",
+      "obo_nosearch": "1",
+      "obo_comment": null,
+      "obo_type": "O",
+      "obo_searchspec": null,
+      "obo_exportorder": null,
+      "obo_distinct": false,
+      "obo_indexable": false,
+      "obo_groupby": false,
+      "obo_dfltref": null,
+      "obo_template_id__tpl_name": "DsfrEmploye",
+      "obo_tpl_list_id__tpl_name": null,
+      "obo_copy": true,
+      "obo_export": ["1"],
+      "obo_pagine": true,
+      "obo_srh_predef": ["1"],
+      "obo_selrow": true,
+      "obo_updall": true,
+      "obo_delall": true,
+      "obo_listsearch": true,
+      "obo_list_edit": [
+       "N",
+       "L",
+       "E"
+      ],
+      "obo_useform": true,
+      "obo_title": null,
+      "obo_icon": "icon/dsfr/icons/user_fill/account",
+      "obo_refcount": false,
+      "obo_tree": false,
+      "obo_viewmode": "T",
+      "obo_historic": null,
+      "obo_printable": true,
+      "obo_followlink": true,
+      "obo_mergeable": false,
+      "obo_social": ["1"],
+      "obo_rowid_id__fld_name": null,
+      "obo_extend_id__obj_name": null,
+      "row_module_id__mdl_name": "AppDSFR",
+      "obo_btn_reload": "P",
+      "obo_btn_prefs": "P",
+      "obo_btn_bookmark": "1",
+      "obo_btn_del": "P",
+      "obo_btn_copy": "P",
+      "obo_btn_export": "P",
+      "obo_btn_listadd": "1",
+      "obo_btn_listedit": "1",
+      "obo_btn_listupsert": "1",
+      "obo_btn_updall": "P",
+      "obo_btn_delall": "P",
+      "obo_btn_merge": "P",
+      "obo_btn_save": true,
+      "obo_btn_saveclose": true,
+      "obo_btn_savenew": true,
+      "obo_btn_savecopy": true,
+      "obo_btn_close": true,
+      "obo_tray": true,
+      "obo_dashboard": [
+       "1",
+       "2"
+      ],
+      "obo_prefix": "emp",
+      "obo_search_ts": null,
+      "obo_minrows": null,
+      "obo_maxrows": null,
+      "obo_sortable": true,
+      "obo_list_areas": null,
+      "obo_minifiable": "M",
+      "obo_minified": false,
+      "obo_permalink": null,
+      "obo_btn_searchform": true,
+      "obo_search_index": null,
+      "obo_search_column": null,
+      "obo_search_dialog": null,
+      "obo_search_docked": null,
+      "obo_tpl_search_id__tpl_name": null,
+      "obo_tpl_search_pos": null
+     }
+    },
+    {
+     "object": "ObjectInternal",
+     "userkey": "DsfrSociete",
+     "item": {
+      "obo_name": "DsfrSociete",
+      "obo_dbtable": "dsfr_societe",
+      "obo_role": "OBJ",
+      "obo_class": null,
+      "obo_script_id": null,
+      "obo_usets": "1",
+      "obo_nosearch": "1",
+      "obo_comment": null,
+      "obo_type": "O",
+      "obo_searchspec": null,
+      "obo_exportorder": null,
+      "obo_distinct": false,
+      "obo_indexable": false,
+      "obo_groupby": false,
+      "obo_dfltref": null,
+      "obo_template_id__tpl_name": "DsfrSociete",
+      "obo_tpl_list_id__tpl_name": null,
+      "obo_copy": true,
+      "obo_export": ["1"],
+      "obo_pagine": true,
+      "obo_srh_predef": ["1"],
+      "obo_selrow": true,
+      "obo_updall": true,
+      "obo_delall": true,
+      "obo_listsearch": true,
+      "obo_list_edit": [
+       "N",
+       "L",
+       "E"
+      ],
+      "obo_useform": true,
+      "obo_title": null,
+      "obo_icon": "icon/dsfr/icons/buildings/hotel",
+      "obo_refcount": false,
+      "obo_tree": false,
+      "obo_viewmode": "T",
+      "obo_historic": null,
+      "obo_printable": true,
+      "obo_followlink": true,
+      "obo_mergeable": false,
+      "obo_social": ["1"],
+      "obo_rowid_id__fld_name": null,
+      "obo_extend_id__obj_name": null,
+      "row_module_id__mdl_name": "AppDSFR",
+      "obo_btn_reload": "P",
+      "obo_btn_prefs": "P",
+      "obo_btn_bookmark": "1",
+      "obo_btn_del": "P",
+      "obo_btn_copy": "P",
+      "obo_btn_export": "P",
+      "obo_btn_listadd": "1",
+      "obo_btn_listedit": "1",
+      "obo_btn_listupsert": "1",
+      "obo_btn_updall": "P",
+      "obo_btn_delall": "P",
+      "obo_btn_merge": "P",
+      "obo_btn_save": true,
+      "obo_btn_saveclose": true,
+      "obo_btn_savenew": true,
+      "obo_btn_savecopy": true,
+      "obo_btn_close": true,
+      "obo_tray": true,
+      "obo_dashboard": [
+       "1",
+       "2"
+      ],
+      "obo_prefix": "soc",
+      "obo_search_ts": null,
+      "obo_minrows": null,
+      "obo_maxrows": null,
+      "obo_sortable": true,
+      "obo_list_areas": null,
+      "obo_minifiable": "M",
+      "obo_minified": false,
+      "obo_permalink": null,
+      "obo_btn_searchform": true,
+      "obo_search_index": null,
+      "obo_search_column": null,
+      "obo_search_dialog": null,
+      "obo_search_docked": null,
+      "obo_tpl_search_id__tpl_name": null,
+      "obo_tpl_search_pos": null
+     }
+    }
+   ]
+  },
+  {
+   "object": "ObjectFieldSystem",
+   "label": "Object fields",
+   "icon": "img/system/object_field",
+   "field": "row_module_id",
+   "list": [
+    {
+     "object": "ObjectFieldSystem",
+     "userkey": "DsfrEmploye~dsfrEmpId~10",
+     "item": {
+      "obf_object_id__obo_name": "DsfrEmploye",
+      "obf_field_id__fld_name": "dsfrEmpId",
+      "obf_order": 10,
+      "obf_group_by": null,
+      "obf_dfault_order": 1,
+      "obf_reorder": null,
+      "obf_input": null,
+      "obf_ref_field_id__fld_name": null,
+      "obf_ref_object_id__obo_name": null,
+      "obf_cascad": null,
+      "obf_card": null,
+      "obf_visible": null,
+      "obf_ref_export": true,
+      "obf_copy": null,
+      "obf_ref_order": null,
+      "obf_fld_visible": null,
+      "obf_fld_required": null,
+      "obf_fld_updatable": null,
+      "obf_fld_research": null,
+      "obf_fld_more": null,
+      "obf_fld_listmore": null,
+      "obf_fld_researchreq": null,
+      "obf_fld_dfault": null,
+      "obf_fld_exportable": null,
+      "obf_fld_uk": null,
+      "obf_area_id__ofa_name": "DsfrEmploye-1",
+      "row_module_id__mdl_name": "AppDSFR",
+      "obf_joined_id__obf_object_id__obo_name": null,
+      "obf_joined_id__obf_field_id__fld_name": null,
+      "obf_joined_id__obf_order": null
+     }
+    },
+    {
+     "object": "ObjectFieldSystem",
+     "userkey": "DsfrEmploye~dsfrEmpNom~20",
+     "item": {
+      "obf_object_id__obo_name": "DsfrEmploye",
+      "obf_field_id__fld_name": "dsfrEmpNom",
+      "obf_order": 20,
+      "obf_group_by": null,
+      "obf_dfault_order": null,
+      "obf_reorder": null,
+      "obf_input": null,
+      "obf_ref_field_id__fld_name": null,
+      "obf_ref_object_id__obo_name": null,
+      "obf_cascad": null,
+      "obf_card": null,
+      "obf_visible": null,
+      "obf_ref_export": true,
+      "obf_copy": null,
+      "obf_ref_order": null,
+      "obf_fld_visible": null,
+      "obf_fld_required": null,
+      "obf_fld_updatable": null,
+      "obf_fld_research": null,
+      "obf_fld_more": null,
+      "obf_fld_listmore": null,
+      "obf_fld_researchreq": null,
+      "obf_fld_dfault": null,
+      "obf_fld_exportable": null,
+      "obf_fld_uk": null,
+      "obf_area_id__ofa_name": "DsfrEmploye-1",
+      "row_module_id__mdl_name": "AppDSFR",
+      "obf_joined_id__obf_object_id__obo_name": null,
+      "obf_joined_id__obf_field_id__fld_name": null,
+      "obf_joined_id__obf_order": null
+     }
+    },
+    {
+     "object": "ObjectFieldSystem",
+     "userkey": "DsfrEmploye~dsfrEmpPrenom~30",
+     "item": {
+      "obf_object_id__obo_name": "DsfrEmploye",
+      "obf_field_id__fld_name": "dsfrEmpPrenom",
+      "obf_order": 30,
+      "obf_group_by": null,
+      "obf_dfault_order": null,
+      "obf_reorder": null,
+      "obf_input": null,
+      "obf_ref_field_id__fld_name": null,
+      "obf_ref_object_id__obo_name": null,
+      "obf_cascad": null,
+      "obf_card": null,
+      "obf_visible": null,
+      "obf_ref_export": true,
+      "obf_copy": null,
+      "obf_ref_order": null,
+      "obf_fld_visible": null,
+      "obf_fld_required": null,
+      "obf_fld_updatable": null,
+      "obf_fld_research": null,
+      "obf_fld_more": null,
+      "obf_fld_listmore": null,
+      "obf_fld_researchreq": null,
+      "obf_fld_dfault": null,
+      "obf_fld_exportable": null,
+      "obf_fld_uk": null,
+      "obf_area_id__ofa_name": "DsfrEmploye-1",
+      "row_module_id__mdl_name": "AppDSFR",
+      "obf_joined_id__obf_object_id__obo_name": null,
+      "obf_joined_id__obf_field_id__fld_name": null,
+      "obf_joined_id__obf_order": null
+     }
+    },
+    {
+     "object": "ObjectFieldSystem",
+     "userkey": "DsfrEmploye~dsfrEmpTel~40",
+     "item": {
+      "obf_object_id__obo_name": "DsfrEmploye",
+      "obf_field_id__fld_name": "dsfrEmpTel",
+      "obf_order": 40,
+      "obf_group_by": null,
+      "obf_dfault_order": null,
+      "obf_reorder": null,
+      "obf_input": null,
+      "obf_ref_field_id__fld_name": null,
+      "obf_ref_object_id__obo_name": null,
+      "obf_cascad": null,
+      "obf_card": null,
+      "obf_visible": null,
+      "obf_ref_export": true,
+      "obf_copy": null,
+      "obf_ref_order": null,
+      "obf_fld_visible": null,
+      "obf_fld_required": null,
+      "obf_fld_updatable": null,
+      "obf_fld_research": null,
+      "obf_fld_more": null,
+      "obf_fld_listmore": null,
+      "obf_fld_researchreq": null,
+      "obf_fld_dfault": null,
+      "obf_fld_exportable": null,
+      "obf_fld_uk": null,
+      "obf_area_id__ofa_name": "DsfrEmploye-1",
+      "row_module_id__mdl_name": "AppDSFR",
+      "obf_joined_id__obf_object_id__obo_name": null,
+      "obf_joined_id__obf_field_id__fld_name": null,
+      "obf_joined_id__obf_order": null
+     }
+    },
+    {
+     "object": "ObjectFieldSystem",
+     "userkey": "DsfrEmploye~dsfrEmpMail~50",
+     "item": {
+      "obf_object_id__obo_name": "DsfrEmploye",
+      "obf_field_id__fld_name": "dsfrEmpMail",
+      "obf_order": 50,
+      "obf_group_by": null,
+      "obf_dfault_order": null,
+      "obf_reorder": null,
+      "obf_input": null,
+      "obf_ref_field_id__fld_name": null,
+      "obf_ref_object_id__obo_name": null,
+      "obf_cascad": null,
+      "obf_card": null,
+      "obf_visible": null,
+      "obf_ref_export": true,
+      "obf_copy": null,
+      "obf_ref_order": null,
+      "obf_fld_visible": null,
+      "obf_fld_required": null,
+      "obf_fld_updatable": null,
+      "obf_fld_research": null,
+      "obf_fld_more": null,
+      "obf_fld_listmore": null,
+      "obf_fld_researchreq": null,
+      "obf_fld_dfault": null,
+      "obf_fld_exportable": null,
+      "obf_fld_uk": null,
+      "obf_area_id__ofa_name": "DsfrEmploye-1",
+      "row_module_id__mdl_name": "AppDSFR",
+      "obf_joined_id__obf_object_id__obo_name": null,
+      "obf_joined_id__obf_field_id__fld_name": null,
+      "obf_joined_id__obf_order": null
+     }
+    },
+    {
+     "object": "ObjectFieldSystem",
+     "userkey": "DsfrEmploye~dsfrEmpSocId~100",
+     "item": {
+      "obf_object_id__obo_name": "DsfrEmploye",
+      "obf_field_id__fld_name": "dsfrEmpSocId",
+      "obf_order": 100,
+      "obf_group_by": null,
+      "obf_dfault_order": null,
+      "obf_reorder": null,
+      "obf_input": null,
+      "obf_ref_field_id__fld_name": null,
+      "obf_ref_object_id__obo_name": "DsfrSociete",
+      "obf_cascad": "C",
+      "obf_card": "0,n",
+      "obf_visible": true,
+      "obf_ref_export": false,
+      "obf_copy": false,
+      "obf_ref_order": null,
+      "obf_fld_visible": null,
+      "obf_fld_required": null,
+      "obf_fld_updatable": null,
+      "obf_fld_research": null,
+      "obf_fld_more": null,
+      "obf_fld_listmore": null,
+      "obf_fld_researchreq": null,
+      "obf_fld_dfault": null,
+      "obf_fld_exportable": null,
+      "obf_fld_uk": null,
+      "obf_area_id__ofa_name": "DsfrEmploye-2",
+      "row_module_id__mdl_name": "AppDSFR",
+      "obf_joined_id__obf_object_id__obo_name": null,
+      "obf_joined_id__obf_field_id__fld_name": null,
+      "obf_joined_id__obf_order": null
+     }
+    },
+    {
+     "object": "ObjectFieldSystem",
+     "userkey": "DsfrEmploye~dsfrSocNom~110",
+     "item": {
+      "obf_object_id__obo_name": "DsfrEmploye",
+      "obf_field_id__fld_name": "dsfrSocNom",
+      "obf_order": 110,
+      "obf_group_by": null,
+      "obf_dfault_order": null,
+      "obf_reorder": null,
+      "obf_input": null,
+      "obf_ref_field_id__fld_name": "dsfrEmpSocId",
+      "obf_ref_object_id__obo_name": "DsfrSociete",
+      "obf_cascad": null,
+      "obf_card": null,
+      "obf_visible": null,
+      "obf_ref_export": true,
+      "obf_copy": null,
+      "obf_ref_order": null,
+      "obf_fld_visible": null,
+      "obf_fld_required": null,
+      "obf_fld_updatable": null,
+      "obf_fld_research": null,
+      "obf_fld_more": null,
+      "obf_fld_listmore": null,
+      "obf_fld_researchreq": null,
+      "obf_fld_dfault": null,
+      "obf_fld_exportable": null,
+      "obf_fld_uk": null,
+      "obf_area_id__ofa_name": "DsfrEmploye-2",
+      "row_module_id__mdl_name": "AppDSFR",
+      "obf_joined_id__obf_object_id__obo_name": "DsfrEmploye",
+      "obf_joined_id__obf_field_id__fld_name": "dsfrEmpSocId",
+      "obf_joined_id__obf_order": 100
+     }
+    },
+    {
+     "object": "ObjectFieldSystem",
+     "userkey": "DsfrEmploye~dsfrSocLogo~120",
+     "item": {
+      "obf_object_id__obo_name": "DsfrEmploye",
+      "obf_field_id__fld_name": "dsfrSocLogo",
+      "obf_order": 120,
+      "obf_group_by": null,
+      "obf_dfault_order": null,
+      "obf_reorder": null,
+      "obf_input": null,
+      "obf_ref_field_id__fld_name": "dsfrEmpSocId",
+      "obf_ref_object_id__obo_name": "DsfrSociete",
+      "obf_cascad": null,
+      "obf_card": null,
+      "obf_visible": null,
+      "obf_ref_export": true,
+      "obf_copy": null,
+      "obf_ref_order": null,
+      "obf_fld_visible": null,
+      "obf_fld_required": null,
+      "obf_fld_updatable": null,
+      "obf_fld_research": null,
+      "obf_fld_more": null,
+      "obf_fld_listmore": null,
+      "obf_fld_researchreq": null,
+      "obf_fld_dfault": null,
+      "obf_fld_exportable": null,
+      "obf_fld_uk": null,
+      "obf_area_id__ofa_name": "DsfrEmploye-2",
+      "row_module_id__mdl_name": "AppDSFR",
+      "obf_joined_id__obf_object_id__obo_name": "DsfrEmploye",
+      "obf_joined_id__obf_field_id__fld_name": "dsfrEmpSocId",
+      "obf_joined_id__obf_order": 100
+     }
+    },
+    {
+     "object": "ObjectFieldSystem",
+     "userkey": "DsfrSociete~dsfrSocNom~10",
+     "item": {
+      "obf_object_id__obo_name": "DsfrSociete",
+      "obf_field_id__fld_name": "dsfrSocNom",
+      "obf_order": 10,
+      "obf_group_by": null,
+      "obf_dfault_order": 1,
+      "obf_reorder": null,
+      "obf_input": null,
+      "obf_ref_field_id__fld_name": null,
+      "obf_ref_object_id__obo_name": null,
+      "obf_cascad": null,
+      "obf_card": null,
+      "obf_visible": null,
+      "obf_ref_export": true,
+      "obf_copy": null,
+      "obf_ref_order": null,
+      "obf_fld_visible": null,
+      "obf_fld_required": null,
+      "obf_fld_updatable": null,
+      "obf_fld_research": null,
+      "obf_fld_more": null,
+      "obf_fld_listmore": null,
+      "obf_fld_researchreq": null,
+      "obf_fld_dfault": null,
+      "obf_fld_exportable": null,
+      "obf_fld_uk": null,
+      "obf_area_id__ofa_name": "DsfrSociete-1",
+      "row_module_id__mdl_name": "AppDSFR",
+      "obf_joined_id__obf_object_id__obo_name": null,
+      "obf_joined_id__obf_field_id__fld_name": null,
+      "obf_joined_id__obf_order": null
+     }
+    },
+    {
+     "object": "ObjectFieldSystem",
+     "userkey": "DsfrSociete~dsfrSocSite~20",
+     "item": {
+      "obf_object_id__obo_name": "DsfrSociete",
+      "obf_field_id__fld_name": "dsfrSocSite",
+      "obf_order": 20,
+      "obf_group_by": null,
+      "obf_dfault_order": null,
+      "obf_reorder": null,
+      "obf_input": null,
+      "obf_ref_field_id__fld_name": null,
+      "obf_ref_object_id__obo_name": null,
+      "obf_cascad": null,
+      "obf_card": null,
+      "obf_visible": null,
+      "obf_ref_export": true,
+      "obf_copy": null,
+      "obf_ref_order": null,
+      "obf_fld_visible": null,
+      "obf_fld_required": null,
+      "obf_fld_updatable": null,
+      "obf_fld_research": null,
+      "obf_fld_more": null,
+      "obf_fld_listmore": null,
+      "obf_fld_researchreq": null,
+      "obf_fld_dfault": null,
+      "obf_fld_exportable": null,
+      "obf_fld_uk": null,
+      "obf_area_id__ofa_name": "DsfrSociete-1",
+      "row_module_id__mdl_name": "AppDSFR",
+      "obf_joined_id__obf_object_id__obo_name": null,
+      "obf_joined_id__obf_field_id__fld_name": null,
+      "obf_joined_id__obf_order": null
+     }
+    },
+    {
+     "object": "ObjectFieldSystem",
+     "userkey": "DsfrSociete~dsfrSocPrivee~30",
+     "item": {
+      "obf_object_id__obo_name": "DsfrSociete",
+      "obf_field_id__fld_name": "dsfrSocPrivee",
+      "obf_order": 30,
+      "obf_group_by": null,
+      "obf_dfault_order": null,
+      "obf_reorder": null,
+      "obf_input": null,
+      "obf_ref_field_id__fld_name": null,
+      "obf_ref_object_id__obo_name": null,
+      "obf_cascad": null,
+      "obf_card": null,
+      "obf_visible": null,
+      "obf_ref_export": true,
+      "obf_copy": null,
+      "obf_ref_order": null,
+      "obf_fld_visible": null,
+      "obf_fld_required": null,
+      "obf_fld_updatable": null,
+      "obf_fld_research": null,
+      "obf_fld_more": null,
+      "obf_fld_listmore": null,
+      "obf_fld_researchreq": null,
+      "obf_fld_dfault": null,
+      "obf_fld_exportable": null,
+      "obf_fld_uk": null,
+      "obf_area_id__ofa_name": "DsfrSociete-1",
+      "row_module_id__mdl_name": "AppDSFR",
+      "obf_joined_id__obf_object_id__obo_name": null,
+      "obf_joined_id__obf_field_id__fld_name": null,
+      "obf_joined_id__obf_order": null
+     }
+    },
+    {
+     "object": "ObjectFieldSystem",
+     "userkey": "DsfrSociete~dsfrSocLogo~40",
+     "item": {
+      "obf_object_id__obo_name": "DsfrSociete",
+      "obf_field_id__fld_name": "dsfrSocLogo",
+      "obf_order": 40,
+      "obf_group_by": null,
+      "obf_dfault_order": null,
+      "obf_reorder": null,
+      "obf_input": null,
+      "obf_ref_field_id__fld_name": null,
+      "obf_ref_object_id__obo_name": null,
+      "obf_cascad": null,
+      "obf_card": null,
+      "obf_visible": null,
+      "obf_ref_export": true,
+      "obf_copy": null,
+      "obf_ref_order": null,
+      "obf_fld_visible": null,
+      "obf_fld_required": null,
+      "obf_fld_updatable": null,
+      "obf_fld_research": null,
+      "obf_fld_more": null,
+      "obf_fld_listmore": null,
+      "obf_fld_researchreq": null,
+      "obf_fld_dfault": null,
+      "obf_fld_exportable": null,
+      "obf_fld_uk": null,
+      "obf_area_id__ofa_name": "DsfrSociete-1",
+      "row_module_id__mdl_name": "AppDSFR",
+      "obf_joined_id__obf_object_id__obo_name": null,
+      "obf_joined_id__obf_field_id__fld_name": null,
+      "obf_joined_id__obf_order": null
+     }
+    },
+    {
+     "object": "ObjectFieldSystem",
+     "userkey": "DsfrSociete~dsfrSocSecteur~50",
+     "item": {
+      "obf_object_id__obo_name": "DsfrSociete",
+      "obf_field_id__fld_name": "dsfrSocSecteur",
+      "obf_order": 50,
+      "obf_group_by": null,
+      "obf_dfault_order": null,
+      "obf_reorder": null,
+      "obf_input": null,
+      "obf_ref_field_id__fld_name": null,
+      "obf_ref_object_id__obo_name": null,
+      "obf_cascad": null,
+      "obf_card": null,
+      "obf_visible": null,
+      "obf_ref_export": true,
+      "obf_copy": null,
+      "obf_ref_order": null,
+      "obf_fld_visible": null,
+      "obf_fld_required": null,
+      "obf_fld_updatable": null,
+      "obf_fld_research": null,
+      "obf_fld_more": null,
+      "obf_fld_listmore": null,
+      "obf_fld_researchreq": null,
+      "obf_fld_dfault": null,
+      "obf_fld_exportable": null,
+      "obf_fld_uk": null,
+      "obf_area_id__ofa_name": "DsfrSociete-1",
+      "row_module_id__mdl_name": "AppDSFR",
+      "obf_joined_id__obf_object_id__obo_name": null,
+      "obf_joined_id__obf_field_id__fld_name": null,
+      "obf_joined_id__obf_order": null
+     }
+    }
+   ]
+  },
+  {
+   "object": "Link",
+   "label": "Links",
+   "icon": "img/system/link",
+   "field": "row_module_id",
+   "list": [{
+    "object": "Link",
+    "userkey": "100~DsfrEmploye~dsfrEmpSocId",
+    "item": {
+     "obf_ref_object_id__obo_name": "DsfrSociete",
+     "obf_order": 100,
+     "obf_ref_order": null,
+     "obf_object_id__obj_name": "DsfrEmploye",
+     "obf_field_id__fld_name": "dsfrEmpSocId",
+     "obf_cascad": "C",
+     "obf_anon": null,
+     "obf_card": "0,n",
+     "obf_query": null,
+     "obf_filters": null,
+     "obf_visible": true,
+     "obf_ref_export": false,
+     "obf_copy": false,
+     "obf_associate": null,
+     "obf_inline": null,
+     "obf_rendering": null,
+     "obf_treedepth": null,
+     "obf_redolog": null,
+     "obf_area_id__ofa_name": "DsfrEmploye-2",
+     "row_module_id__mdl_name": "AppDSFR"
+    }
+   }]
+  },
+  {
+   "object": "Function",
+   "label": "Functions",
+   "icon": "img/system/function",
+   "field": "row_module_id",
+   "list": [
+    {
+     "object": "Function",
+     "userkey": "DSFR_EMP_CRU",
+     "item": {
+      "fct_name": "DSFR_EMP_CRU",
+      "fct_object_id__obo_name": "DsfrEmploye",
+      "fct_function": "CM",
+      "fct_action_id__act_name": null,
+      "fct_view_id__viw_name": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "Function",
+     "userkey": "DSFR_EMP_CRUD",
+     "item": {
+      "fct_name": "DSFR_EMP_CRUD",
+      "fct_object_id__obo_name": "DsfrEmploye",
+      "fct_function": "CMS",
+      "fct_action_id__act_name": null,
+      "fct_view_id__viw_name": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "Function",
+     "userkey": "DSFR_EMP_R",
+     "item": {
+      "fct_name": "DSFR_EMP_R",
+      "fct_object_id__obo_name": "DsfrEmploye",
+      "fct_function": "L",
+      "fct_action_id__act_name": null,
+      "fct_view_id__viw_name": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "Function",
+     "userkey": "DSFR_SOC_CRU",
+     "item": {
+      "fct_name": "DSFR_SOC_CRU",
+      "fct_object_id__obo_name": "DsfrSociete",
+      "fct_function": "CM",
+      "fct_action_id__act_name": null,
+      "fct_view_id__viw_name": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "Function",
+     "userkey": "DSFR_SOC_CRUD",
+     "item": {
+      "fct_name": "DSFR_SOC_CRUD",
+      "fct_object_id__obo_name": "DsfrSociete",
+      "fct_function": "CMS",
+      "fct_action_id__act_name": null,
+      "fct_view_id__viw_name": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "Function",
+     "userkey": "DSFR_SOC_R",
+     "item": {
+      "fct_name": "DSFR_SOC_R",
+      "fct_object_id__obo_name": "DsfrSociete",
+      "fct_function": "L",
+      "fct_action_id__act_name": null,
+      "fct_view_id__viw_name": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    }
+   ]
+  },
+  {
+   "object": "Grant",
+   "label": "Grant",
+   "icon": "img/system/grant",
+   "field": "row_module_id",
+   "list": [
+    {
+     "object": "Grant",
+     "userkey": "DSFR_ADMIN~DSFR_EMP_CRUD~DsfrEmploye~",
+     "item": {
+      "grt_group_id__grp_name": "DSFR_ADMIN",
+      "grt_function_id__fct_name": "DSFR_EMP_CRUD",
+      "grt_function_id__fct_object_id__obo_name": "DsfrEmploye",
+      "grt_function_id__fct_action_id__act_name": null,
+      "grt_activ": true,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "Grant",
+     "userkey": "DSFR_ADMIN~DSFR_SOC_CRUD~DsfrSociete~",
+     "item": {
+      "grt_group_id__grp_name": "DSFR_ADMIN",
+      "grt_function_id__fct_name": "DSFR_SOC_CRUD",
+      "grt_function_id__fct_object_id__obo_name": "DsfrSociete",
+      "grt_function_id__fct_action_id__act_name": null,
+      "grt_activ": true,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "Grant",
+     "userkey": "DSFR_USER~DSFR_EMP_CRU~DsfrEmploye~",
+     "item": {
+      "grt_group_id__grp_name": "DSFR_USER",
+      "grt_function_id__fct_name": "DSFR_EMP_CRU",
+      "grt_function_id__fct_object_id__obo_name": "DsfrEmploye",
+      "grt_function_id__fct_action_id__act_name": null,
+      "grt_activ": true,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "Grant",
+     "userkey": "DSFR_USER~DSFR_SOC_CRU~DsfrSociete~",
+     "item": {
+      "grt_group_id__grp_name": "DSFR_USER",
+      "grt_function_id__fct_name": "DSFR_SOC_CRU",
+      "grt_function_id__fct_object_id__obo_name": "DsfrSociete",
+      "grt_function_id__fct_action_id__act_name": null,
+      "grt_activ": true,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    }
+   ]
+  },
+  {
+   "object": "DocIndex",
+   "label": "Bookshelf",
+   "icon": "img/system/bookshelf",
+   "field": "row_module_id",
+   "list": [{
+    "object": "DocIndex",
+    "userkey": "B-dsfrSocLogo",
+    "item": {
+     "din_name": "B-dsfrSocLogo",
+     "din_field_id__fld_name": "dsfrSocLogo",
+     "din_path": null,
+     "din_min": null,
+     "din_max": null,
+     "din_grant": false,
+     "row_module_id__mdl_name": "AppDSFR"
+    }
+   }]
+  },
+  {
+   "object": "Map",
+   "label": "Main menu",
+   "icon": "img/system/main_menu",
+   "field": "row_module_id",
+   "list": [
+    {
+     "object": "Map",
+     "userkey": "DsfrDomain~ObjectInternal(DsfrSociete)~1000",
+     "item": {
+      "map_domain_id__obd_name": "DsfrDomain",
+      "map_object": {
+       "object": "ObjectInternal",
+       "label": "Business object",
+       "userkeylabel": "DsfrSociete",
+       "icon": "img/system/business_object",
+       "item": {"obo_name": "DsfrSociete"}
+      },
+      "map_order": 1000,
+      "map_ext": false,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "Map",
+     "userkey": "DsfrDomain~ObjectInternal(DsfrEmploye)~1010",
+     "item": {
+      "map_domain_id__obd_name": "DsfrDomain",
+      "map_object": {
+       "object": "ObjectInternal",
+       "label": "Business object",
+       "userkeylabel": "DsfrEmploye",
+       "icon": "img/system/business_object",
+       "item": {"obo_name": "DsfrEmploye"}
+      },
+      "map_order": 1010,
+      "map_ext": false,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    }
+   ]
+  },
+  {
    "object": "ViewGroup",
    "label": "Active group",
    "icon": "object",
@@ -110,6 +2032,602 @@
      "row_module_id__mdl_name": "AppDSFR"
     }
    }]
+  },
+  {
+   "object": "TranslateField",
+   "label": "Field translation",
+   "icon": "img/system/translation",
+   "field": "row_module_id",
+   "list": [
+    {
+     "object": "TranslateField",
+     "userkey": "Field(dsfrSocNom)~ENU",
+     "item": {
+      "tsl_object": {
+       "object": "Field",
+       "label": "Field",
+       "userkeylabel": "dsfrSocNom",
+       "icon": "img/system/field",
+       "item": {"fld_name": "dsfrSocNom"}
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Soc nom",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(dsfrSocNom)~FRA",
+     "item": {
+      "tsl_object": {
+       "object": "Field",
+       "label": "Field",
+       "userkeylabel": "dsfrSocNom",
+       "icon": "img/system/field",
+       "item": {"fld_name": "dsfrSocNom"}
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Nom",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(dsfrSocSite)~ENU",
+     "item": {
+      "tsl_object": {
+       "object": "Field",
+       "label": "Field",
+       "userkeylabel": "dsfrSocSite",
+       "icon": "img/system/field",
+       "item": {"fld_name": "dsfrSocSite"}
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Soc site",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(dsfrSocSite)~FRA",
+     "item": {
+      "tsl_object": {
+       "object": "Field",
+       "label": "Field",
+       "userkeylabel": "dsfrSocSite",
+       "icon": "img/system/field",
+       "item": {"fld_name": "dsfrSocSite"}
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Site",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(dsfrSocPrivee)~ENU",
+     "item": {
+      "tsl_object": {
+       "object": "Field",
+       "label": "Field",
+       "userkeylabel": "dsfrSocPrivee",
+       "icon": "img/system/field",
+       "item": {"fld_name": "dsfrSocPrivee"}
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Soc privee",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(dsfrSocPrivee)~FRA",
+     "item": {
+      "tsl_object": {
+       "object": "Field",
+       "label": "Field",
+       "userkeylabel": "dsfrSocPrivee",
+       "icon": "img/system/field",
+       "item": {"fld_name": "dsfrSocPrivee"}
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Catégorie",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(dsfrSocLogo)~ENU",
+     "item": {
+      "tsl_object": {
+       "object": "Field",
+       "label": "Field",
+       "userkeylabel": "dsfrSocLogo",
+       "icon": "img/system/field",
+       "item": {"fld_name": "dsfrSocLogo"}
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Soc logo",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(dsfrSocLogo)~FRA",
+     "item": {
+      "tsl_object": {
+       "object": "Field",
+       "label": "Field",
+       "userkeylabel": "dsfrSocLogo",
+       "icon": "img/system/field",
+       "item": {"fld_name": "dsfrSocLogo"}
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Logo",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(dsfrSocSecteur)~ENU",
+     "item": {
+      "tsl_object": {
+       "object": "Field",
+       "label": "Field",
+       "userkeylabel": "dsfrSocSecteur",
+       "icon": "img/system/field",
+       "item": {"fld_name": "dsfrSocSecteur"}
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Soc secteur",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(dsfrSocSecteur)~FRA",
+     "item": {
+      "tsl_object": {
+       "object": "Field",
+       "label": "Field",
+       "userkeylabel": "dsfrSocSecteur",
+       "icon": "img/system/field",
+       "item": {"fld_name": "dsfrSocSecteur"}
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Secteur",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(dsfrEmpId)~ENU",
+     "item": {
+      "tsl_object": {
+       "object": "Field",
+       "label": "Field",
+       "userkeylabel": "dsfrEmpId",
+       "icon": "img/system/field",
+       "item": {"fld_name": "dsfrEmpId"}
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Emp id",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(dsfrEmpId)~FRA",
+     "item": {
+      "tsl_object": {
+       "object": "Field",
+       "label": "Field",
+       "userkeylabel": "dsfrEmpId",
+       "icon": "img/system/field",
+       "item": {"fld_name": "dsfrEmpId"}
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "INE/BEA",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(dsfrEmpNom)~ENU",
+     "item": {
+      "tsl_object": {
+       "object": "Field",
+       "label": "Field",
+       "userkeylabel": "dsfrEmpNom",
+       "icon": "img/system/field",
+       "item": {"fld_name": "dsfrEmpNom"}
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Emp nom",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(dsfrEmpNom)~FRA",
+     "item": {
+      "tsl_object": {
+       "object": "Field",
+       "label": "Field",
+       "userkeylabel": "dsfrEmpNom",
+       "icon": "img/system/field",
+       "item": {"fld_name": "dsfrEmpNom"}
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Nom",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(dsfrEmpPrenom)~ENU",
+     "item": {
+      "tsl_object": {
+       "object": "Field",
+       "label": "Field",
+       "userkeylabel": "dsfrEmpPrenom",
+       "icon": "img/system/field",
+       "item": {"fld_name": "dsfrEmpPrenom"}
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Emp prenom",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(dsfrEmpPrenom)~FRA",
+     "item": {
+      "tsl_object": {
+       "object": "Field",
+       "label": "Field",
+       "userkeylabel": "dsfrEmpPrenom",
+       "icon": "img/system/field",
+       "item": {"fld_name": "dsfrEmpPrenom"}
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Prenom",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(dsfrEmpTel)~ENU",
+     "item": {
+      "tsl_object": {
+       "object": "Field",
+       "label": "Field",
+       "userkeylabel": "dsfrEmpTel",
+       "icon": "img/system/field",
+       "item": {"fld_name": "dsfrEmpTel"}
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Emp tel",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(dsfrEmpTel)~FRA",
+     "item": {
+      "tsl_object": {
+       "object": "Field",
+       "label": "Field",
+       "userkeylabel": "dsfrEmpTel",
+       "icon": "img/system/field",
+       "item": {"fld_name": "dsfrEmpTel"}
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Tel",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(dsfrEmpMail)~ENU",
+     "item": {
+      "tsl_object": {
+       "object": "Field",
+       "label": "Field",
+       "userkeylabel": "dsfrEmpMail",
+       "icon": "img/system/field",
+       "item": {"fld_name": "dsfrEmpMail"}
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Emp mail",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(dsfrEmpMail)~FRA",
+     "item": {
+      "tsl_object": {
+       "object": "Field",
+       "label": "Field",
+       "userkeylabel": "dsfrEmpMail",
+       "icon": "img/system/field",
+       "item": {"fld_name": "dsfrEmpMail"}
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Mail",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(dsfrEmpSocId)~ENU",
+     "item": {
+      "tsl_object": {
+       "object": "Field",
+       "label": "Field",
+       "userkeylabel": "dsfrEmpSocId",
+       "icon": "img/system/field",
+       "item": {"fld_name": "dsfrEmpSocId"}
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Emp soc id",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateField",
+     "userkey": "Field(dsfrEmpSocId)~FRA",
+     "item": {
+      "tsl_object": {
+       "object": "Field",
+       "label": "Field",
+       "userkeylabel": "dsfrEmpSocId",
+       "icon": "img/system/field",
+       "item": {"fld_name": "dsfrEmpSocId"}
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Société",
+      "tsl_simplehelp": null,
+      "tsl_plural_value": null,
+      "tsl_short_value": null,
+      "tsl_placeholder": null,
+      "tsl_listhelp": null,
+      "tsl_tooltip": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    }
+   ]
+  },
+  {
+   "object": "TranslateFieldArea",
+   "label": "Field area translation",
+   "icon": "img/system/translation",
+   "field": "row_module_id",
+   "list": [
+    {
+     "object": "TranslateFieldArea",
+     "userkey": "ObjectFieldArea(DsfrSociete-1)~ENU",
+     "item": {
+      "tsl_object": {
+       "object": "ObjectFieldArea",
+       "label": "Fields area",
+       "userkeylabel": "DsfrSociete-1",
+       "icon": "img/system/field_area",
+       "item": {"ofa_name": "DsfrSociete-1"}
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Societe -1",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateFieldArea",
+     "userkey": "ObjectFieldArea(DsfrSociete-1)~FRA",
+     "item": {
+      "tsl_object": {
+       "object": "ObjectFieldArea",
+       "label": "Fields area",
+       "userkeylabel": "DsfrSociete-1",
+       "icon": "img/system/field_area",
+       "item": {"ofa_name": "DsfrSociete-1"}
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Informations",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateFieldArea",
+     "userkey": "ObjectFieldArea(DsfrEmploye-1)~ENU",
+     "item": {
+      "tsl_object": {
+       "object": "ObjectFieldArea",
+       "label": "Fields area",
+       "userkeylabel": "DsfrEmploye-1",
+       "icon": "img/system/field_area",
+       "item": {"ofa_name": "DsfrEmploye-1"}
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Employe -1",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateFieldArea",
+     "userkey": "ObjectFieldArea(DsfrEmploye-1)~FRA",
+     "item": {
+      "tsl_object": {
+       "object": "ObjectFieldArea",
+       "label": "Fields area",
+       "userkeylabel": "DsfrEmploye-1",
+       "icon": "img/system/field_area",
+       "item": {"ofa_name": "DsfrEmploye-1"}
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Informations",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateFieldArea",
+     "userkey": "ObjectFieldArea(DsfrEmploye-2)~ENU",
+     "item": {
+      "tsl_object": {
+       "object": "ObjectFieldArea",
+       "label": "Fields area",
+       "userkeylabel": "DsfrEmploye-2",
+       "icon": "img/system/field_area",
+       "item": {"ofa_name": "DsfrEmploye-2"}
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Employe -2",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateFieldArea",
+     "userkey": "ObjectFieldArea(DsfrEmploye-2)~FRA",
+     "item": {
+      "tsl_object": {
+       "object": "ObjectFieldArea",
+       "label": "Fields area",
+       "userkeylabel": "DsfrEmploye-2",
+       "icon": "img/system/field_area",
+       "item": {"ofa_name": "DsfrEmploye-2"}
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Société",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    }
+   ]
   },
   {
    "object": "TranslateDomain",
@@ -154,6 +2672,86 @@
    ]
   },
   {
+   "object": "TranslateObject",
+   "label": "Object translation",
+   "icon": "img/system/translation",
+   "field": "row_module_id",
+   "list": [
+    {
+     "object": "TranslateObject",
+     "userkey": "ObjectInternal(DsfrSociete)~ENU",
+     "item": {
+      "tsl_object": {
+       "object": "ObjectInternal",
+       "label": "Business object",
+       "userkeylabel": "DsfrSociete",
+       "icon": "img/system/business_object",
+       "item": {"obo_name": "DsfrSociete"}
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Company",
+      "tsl_plural_value": null,
+      "tsl_help": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateObject",
+     "userkey": "ObjectInternal(DsfrSociete)~FRA",
+     "item": {
+      "tsl_object": {
+       "object": "ObjectInternal",
+       "label": "Business object",
+       "userkeylabel": "DsfrSociete",
+       "icon": "img/system/business_object",
+       "item": {"obo_name": "DsfrSociete"}
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Société",
+      "tsl_plural_value": null,
+      "tsl_help": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateObject",
+     "userkey": "ObjectInternal(DsfrEmploye)~ENU",
+     "item": {
+      "tsl_object": {
+       "object": "ObjectInternal",
+       "label": "Business object",
+       "userkeylabel": "DsfrEmploye",
+       "icon": "img/system/business_object",
+       "item": {"obo_name": "DsfrEmploye"}
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "Employee",
+      "tsl_plural_value": null,
+      "tsl_help": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateObject",
+     "userkey": "ObjectInternal(DsfrEmploye)~FRA",
+     "item": {
+      "tsl_object": {
+       "object": "ObjectInternal",
+       "label": "Business object",
+       "userkeylabel": "DsfrEmploye",
+       "icon": "img/system/business_object",
+       "item": {"obo_name": "DsfrEmploye"}
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Employé",
+      "tsl_plural_value": null,
+      "tsl_help": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    }
+   ]
+  },
+  {
    "object": "TranslateView",
    "label": "View translation",
    "icon": "img/system/translation",
@@ -190,6 +2788,46 @@
       "tsl_lang": "FRA",
       "tsl_value": "App DSFRscope",
       "tsl_help": null,
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    }
+   ]
+  },
+  {
+   "object": "TranslateDocIndex",
+   "label": "Document index translation",
+   "icon": "img/system/translation",
+   "field": "row_module_id",
+   "list": [
+    {
+     "object": "TranslateDocIndex",
+     "userkey": "DocIndex(B-dsfrSocLogo)~ENU",
+     "item": {
+      "tsl_object": {
+       "object": "DocIndex",
+       "label": "Bookshelf",
+       "userkeylabel": "B-dsfrSocLogo",
+       "icon": "img/system/bookshelf",
+       "item": {"din_name": "B-dsfrSocLogo"}
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "B-dsfr soc logo",
+      "row_module_id__mdl_name": "AppDSFR"
+     }
+    },
+    {
+     "object": "TranslateDocIndex",
+     "userkey": "DocIndex(B-dsfrSocLogo)~FRA",
+     "item": {
+      "tsl_object": {
+       "object": "DocIndex",
+       "label": "Bookshelf",
+       "userkeylabel": "B-dsfrSocLogo",
+       "icon": "img/system/bookshelf",
+       "item": {"din_name": "B-dsfrSocLogo"}
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "B-dsfr soc logo",
       "row_module_id__mdl_name": "AppDSFR"
      }
     }
